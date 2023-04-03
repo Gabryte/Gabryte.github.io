@@ -1,0 +1,33 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: top;
+    column-gap: 5%;
+    width: 100%;
+    height: 10%;
+}
+#title_img{
+    width:50%;
+    height:2%;
+    order:1;
+}
+#mail_img{
+    order:2;
+    height:2%;
+    padding-top: 1%;
+    padding-left: 2%;
+
+}
+#subscribe_button{
+    order:3;
+
+}
+#sign_in_button{
+    order:4;
+    align-self: flex-end;
+}
+#under_bar{
+
+}
