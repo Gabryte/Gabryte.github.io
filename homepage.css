@@ -19,14 +19,28 @@
     padding-top: 1%;
     padding-left: 2%;
 
-}
-#subscribe_button{
-    order:3;
 
 }
-#sign_in_button{
+
+#sign_and_sub_division{
+    display: flex;
+    padding-top: -10%;
+    border: 1px solid black;
+    flex-direction: row;
+    flex-wrap: nowrap;
     order:4;
     align-self: flex-end;
+}
+#sign_in{
+    background: White;
+    font-size: 18px;
+    color: gray;
+}
+
+#subscribe{
+    background: Black;
+    font-size: 18px;
+    color: white;
 }
 #under_bar{
 
