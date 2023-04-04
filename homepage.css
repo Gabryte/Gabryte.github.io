@@ -403,11 +403,9 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .img_article{
     float:left;
-    height: auto;
-    max-width: 100%;
 }
 .sub{
-    max-width: 23%;
+    max-width: 113px;
     padding: 2px;
 }
 .sub p{
