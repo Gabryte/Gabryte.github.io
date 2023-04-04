@@ -186,3 +186,26 @@ ul#menu ul a:hover {
     max-height: 15%;
     max-width: 15%;
 }
+.sub_under_bar{
+    text-align: center;
+    margin: 12px auto 0;
+    font-size: 12px;
+}
+.sub_under_bar div:first-of-type{
+    border-left: 0;
+}
+.sub_under_bar .externals{
+    border-left: 0;
+}
+.sub_under_bar div{
+    padding: 0 5px;
+    border-left: 1px solid black;
+    display: inline;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+.sub_under_bar div a{
+    color: black;
+    text-decoration: none;
+}
+
+
