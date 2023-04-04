@@ -69,9 +69,12 @@
     box-shadow: 0 2px 3px rgba(0,0,0,0.4);
 }
 
-/*menu*/
 
 ul#menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     margin:0 0 0;
     padding: 0;
     list-style: none;
@@ -166,19 +169,21 @@ ul#menu ul a:hover {
     border-top-width: 1px;
 }
 .bar_wrapper{
-    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
     height: auto;
     text-align: left;
 }
-
 .comment_under_bar{
+    align-self: flex-end;
     font-size: smaller;
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
 .img_under_bar{
     float: left;
-    width: 15%;
-    height: 15%;
+    width: 100%;
+    height: 100%;
     max-height: 15%;
     max-width: 15%;
 }
