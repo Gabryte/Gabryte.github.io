@@ -518,7 +518,13 @@ input {
     font-size: 120%;
 
 }
-
+.right_side_comment_header a{
+    text-decoration: none;
+    color: white;
+}
+.right_side_comment_header a:hover{
+    text-decoration: underline;
+}
 
 #main_content #articles article{/*for the articles spacing*/
     margin-bottom: 2%;
