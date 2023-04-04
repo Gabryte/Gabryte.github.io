@@ -343,6 +343,7 @@ ul#menu ul a:hover {
 #main_content{ /*main content settings*/
     display: flex;
     flex-direction: row;
+    column-gap: 1%;
     justify-content: center;
     align-items: stretch;
     align-content: flex-start;
@@ -364,7 +365,8 @@ section#middle_column .front_article{
     margin-bottom: 20px;
 }
 section#middle_column .front_article .main_article_title{
-    font-size: 10%;
+    font-size: 185%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
 }
 section#middle_column .front_article .main_article_title a{
     text-decoration: none;
@@ -373,7 +375,17 @@ section#middle_column .front_article .main_article_title a{
 section#middle_column .front_article .main_article_title a:hover{
    text-decoration: underline;
 }
+.main_article_img .donald_caption{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    color: #5b5b5b;
+    font-size: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
+.main_article_img figure{
+    margin:0 0 0 0;
+}
 
 #main_content aside{/*third column*/
     order: 3;
