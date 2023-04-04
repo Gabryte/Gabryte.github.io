@@ -11,6 +11,11 @@
 *{
     box-sizing: border-box;
 }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, Helmet, Freesans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
 #header{
     display: flex;
     flex-direction: row;
@@ -166,6 +171,7 @@ ul#header_menu ul a:hover {
     margin: 0 auto;
     padding: 0;
     width: 100%;
+    z-index: 2;/*Above all*/
 }
 /* The sticky class is added to the drop-menu with JS when it reaches its scroll position */
 .sticky {
@@ -466,7 +472,7 @@ section#middle_column .front_article .main_article_title a:hover{
     transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
 }
 input {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans','Helvetica Neue','Helvetica','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 10px;
     font-weight: bold;
     width: 27px;
@@ -498,6 +504,20 @@ input {
     transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
 }
 
+/*end anim search bar*/
+
+/*Commentary Section*/
+
+
+.right_side_comment_header{
+    margin: 2% 0 2%;/*TODO revisit 2*/
+    text-transform: uppercase;
+    padding: 2% 0 2% 4%;
+    background-color: #9ea7b3;
+    color: white;
+    font-size: 120%;
+
+}
 
 
 #main_content #articles article{/*for the articles spacing*/
