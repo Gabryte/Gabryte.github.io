@@ -8,6 +8,9 @@
         display: none;
     }
 }
+*{
+    box-sizing: border-box;
+}
 #header{
     display: flex;
     flex-direction: row;
@@ -330,29 +333,56 @@ ul#menu ul a:hover {
 }
 .sub_under_bar div a{
     color: black;
+    text-transform: uppercase;
     text-decoration: none;
 }
 .sub_under_bar div a:hover{
     color: black;
     text-decoration: underline;
 }
-#main_content{
+#main_content{ /*main content settings*/
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    align-content: flex-start;
 }
-#main_content nav{
+#main_content nav#articles{ /*left column*/
     order: 1;
     flex-basis: 25%;
+    border-right: 1px solid gray;
+    flex-direction: column;
 }
-#main_content section{
+#main_content #middle_column{ /*for the middle column*/
     order: 2;
     flex-basis: 50%;
+    flex-direction: column;
 }
-#main_content aside{
+section#middle_column .front_article{
+    color: #5b5b5b;
+    border-bottom: 5px solid #ccc;
+    margin-bottom: 20px;
+}
+section#middle_column .front_article .main_article_title{
+    font-size: 10%;
+}
+section#middle_column .front_article .main_article_title a{
+    text-decoration: none;
+    color: black;
+}
+section#middle_column .front_article .main_article_title a:hover{
+   text-decoration: underline;
+}
+
+
+#main_content aside{/*third column*/
     order: 3;
+    flex-direction: column;
     flex-basis: 25%;
+}
+
+#main_content #articles article{/*for the articles spacing*/
+    margin-bottom: 2%;
 }
 
 .article_wrapper{
@@ -362,9 +392,33 @@ ul#menu ul a:hover {
 .article_text{
     align-self: flex-end;
 }
+.article_text a{
+    text-decoration: none;
+    color: black;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: smaller;
+}
+.article_text a:hover{
+    text-decoration: underline;
+}
 .img_article{
-    align-self: flex-start;
-    max-height: 100%;
+    float:left;
+    height: auto;
     max-width: 100%;
+}
+.sub{
+    max-width: 23%;
+    padding: 2px;
+}
+.sub p{
+    color: #fff;
+    background-color: #a9091f;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.3em;
+    padding: 3px 5px;
 }
 
