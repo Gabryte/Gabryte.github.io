@@ -410,6 +410,23 @@ section#middle_column .front_article .main_article_title a:hover{
     border-left: 1px solid gray;
 }
 
+#follow_bar{
+    font-size: 150%;
+    margin-bottom: 2%;
+    font-weight: 700;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+
+.share{
+    max-width: 30px;
+    max-height: 30px;
+    margin:0 1%;
+}
+
+#search_bar{
+
+}
+
 #main_content #articles article{/*for the articles spacing*/
     margin-bottom: 2%;
 }
