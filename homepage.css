@@ -354,6 +354,7 @@ ul#menu ul a:hover {
     max-width: 425px;
     border-right: 1px solid gray;
     flex-direction: column;
+    padding-right: 1%;
 }
 #main_content #middle_column{ /*for the middle column*/
     order: 2;
@@ -406,8 +407,9 @@ section#middle_column .front_article .main_article_title a:hover{
     order: 3;
     flex-direction: column;
     flex-basis: 25%;
-    max-width: 25%;
+    max-width: 425px;
     border-left: 1px solid gray;
+    padding-left: 1%;
 }
 
 #follow_bar{
