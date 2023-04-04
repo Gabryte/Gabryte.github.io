@@ -508,9 +508,12 @@ input {
 
 /*Commentary Section*/
 
+#commentary_section{
+    display: block;
+}
 
 .right_side_comment_header{
-    margin: 2% 0 2%;/*TODO revisit 2*/
+    margin: 3% 0 2%;/*TODO revisit 2*/
     text-transform: uppercase;
     padding: 2% 0 2% 4%;
     background-color: #9ea7b3;
@@ -526,6 +529,11 @@ input {
     text-decoration: underline;
 }
 
+.journalist_col{
+    /*TODO*/
+}
+
+/*End commentary section*/
 #main_content #articles article{/*for the articles spacing*/
     margin-bottom: 2%;
 }
@@ -547,6 +555,7 @@ input {
 .article_text{
     /*align-self: flex-end;*/
     float: right;
+    padding-left: 2%;
     max-width: 75%;
     height: auto;
 
