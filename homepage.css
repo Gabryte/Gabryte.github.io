@@ -44,18 +44,18 @@
     order:3;
     width: 10%;
     height: auto;
+
 }
 
 ul#header_menu{
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    float: left;
     margin:15% 0 0;
     padding: 0;
     border: 2px solid black;
     border-radius: 5px;
-    float:left;
     background-color: white;
     font-size:80%;
     font-family: Signika,Helmet,Freesans,sans-serif;
@@ -72,24 +72,22 @@ ul#header_menu .first {
 }
 
 ul#header_menu .second {
+    float:left;
     background-color: white;
     margin:0;
     padding:0;
-    float:left;
     font-size: 120%;
     display: block;
     position: relative;
 }
 ul#header_menu .first a {
     float: left;
-    padding:12px 30px;
     color: white;
     text-transform: none;
     text-decoration:none;
 }
 ul#header_menu .second a {
     float: left;
-    padding:12px 30px;
     color: gray;
     text-transform: none;
     text-decoration:none;
