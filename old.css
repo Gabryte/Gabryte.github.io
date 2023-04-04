@@ -92,3 +92,13 @@
     max-width: 70%;
     color: white;
 }
+/* HTML old
+<form id="anim_form"><!--action="search.php" method="get"-->
+<!--<fieldset id="search_field_set">-->
+<input class="search_button" type="submit" value="GO" title="Search..."></input>
+<label for="search_input">Search</label>
+<input id="search_input" placeholder="Search..." value="" type="search"></input>
+<span class="caret"></span>
+<!--</fieldset>-->
+</form>
+*/

@@ -5,7 +5,15 @@
     <title>The Washington Times</title>
     <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/50x50/de3131/ffffff?text=W">
     <link rel="stylesheet" href="homepage.css">
-    <script src="homepage.js"></script>
+    <script><!-- for search box anim-->
+        var searchBox = document.querySelectorAll('.search-box input[type="text"] + span');
+
+        searchBox.forEach((elm) => {
+            elm.addEventListener('click', () => {
+                elm.previousElementSibling.value = '';
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -279,9 +287,9 @@
                 <a href="#" title="Twitter" alt="Twitter"><img class="share" src="img/twitter.jpg"></img></a>
                 <a href="#" title="Instagram" alt="Instagram"><img class="share" src="img/instagram.jpg"></img></a>
                 <a href="#" title="Instagram" alt="<Wifi"><img class="share" src="img/wify.jpg"></img></a>
-                <div id="search_bar">
-
-                </div>
+            </div>
+            <div class="search-anim-box">
+                <input type="text" placeholder=" " /><span></span>
             </div>
         </aside>
     </section>
