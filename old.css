@@ -48,3 +48,11 @@
     max-width: 70%;
     color: white;
 }
+
+.bar_wrapper_ghost{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: auto;
+}
