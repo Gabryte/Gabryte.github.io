@@ -5,24 +5,14 @@
     <title>The Washington Times</title>
     <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/50x50/de3131/ffffff?text=W">
     <link rel="stylesheet" href="homepage.css">
+    <script src="homepage.js"></script>
 </head>
 <body>
     <div id="header">
         <figure>
         <img id="title_img" src="img/titleImg.gif" title="The Washington Post" alt="The Washington Post"></img>
-            <figcaption id="title_caption"><i class="fig">America's Newspaper</i></figcaption>
+            <figcaption id="title_caption"><i>America's Newspaper</i></figcaption>
         </figure>
-
-        <img id="mail_img" src="img/mail.gif" title="mail to us"></img>
-
-        <div id="sign_and_sub_division">
-            <div id="subscribe">
-                <strong>Subscribe</strong>
-            </div>
-            <div id="sign_in">
-                <strong>Sign In</strong>
-            </div>
-        </div>
     </div>
     <div id="drop-menu">
         <ul id="menu">
@@ -110,6 +100,24 @@
             </li>
         </ul>
     </div>
+    <script>
+
+    window.onscroll = function() {checkStickyFrontBar()};
+
+
+    var frontBar = document.getElementById("drop-menu");
+
+
+    var sticky = frontBar.offsetTop;
+
+    function checkStickyFrontBar() {
+        if (window.pageYOffset >= sticky) {
+            frontBar.classList.add("sticky")
+        } else {
+            frontBar.classList.remove("sticky");
+        }
+    }
+    </script>
     <br/>
     <br/>
     <br/>
