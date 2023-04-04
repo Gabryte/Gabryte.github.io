@@ -351,14 +351,14 @@ ul#menu ul a:hover {
 #main_content nav#articles{ /*left column*/
     order: 1;
     flex-basis: 25%;
-    max-width: 25%;
+    max-width: 425px;
     border-right: 1px solid gray;
     flex-direction: column;
 }
 #main_content #middle_column{ /*for the middle column*/
     order: 2;
     flex-basis: 50%;
-    max-width: 50%;
+    max-width: 500px;
     flex-direction: column;
 }
 section#middle_column .front_article{
