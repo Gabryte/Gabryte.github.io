@@ -19,7 +19,7 @@
             <ul id="header_menu">
                 <li class="first"><a href="#"><strong>Subscribe</strong></a></li>
                 <li class="second"><a href="#"><strong>SignIn</strong></a>
-                    <ul class="header_tend">
+                    <ul class="header_tend_after_compression">
                         <li><a href="#"><strong>SignIn</strong></a></li>
                         <li><a href="#"><strong>Today's E-Edition</strong></a></li>
                         <li><a href="#"><strong>NewsLetter</strong></a></li>
@@ -30,6 +30,24 @@
 
             </ul>
         </div>
+
+        <script>
+            /*
+            window.onresize = function(){checkForResize()}
+
+            var second_tend = document.getElementsByClassName("header_tend");
+
+            var x_pos = second_tend.getBoundingClientRect().left + 100;
+            function checkForResize() {
+                if (window.innerWidth <= x_pos) {
+                    second_tend.classList.remove("header_tend");
+                    second_tend.classList.add("header_tend_after_compression")
+                } else {
+                    second_tend.classList.remove("header_tend_after_compression");
+                }
+            }
+            */
+        </script>
 
     </div>
     <div id="drop-menu">
@@ -107,7 +125,7 @@
                 </ul>
             </li>
             <li><a href="#"><strong>Games</strong></a>
-                <ul class="tend">
+                <ul class="last_tend">
                     <li><a href="#"><strong>Corrections</strong></a></li>
                     <li><a href="#"><strong>HealthCare</strong></a></li>
                     <li><a href="#"><strong>Immigration</strong></a></li>

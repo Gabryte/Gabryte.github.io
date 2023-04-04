@@ -116,6 +116,21 @@ ul#header_menu .first a:hover {
     border-radius: 5px;
     border:1px solid white;
 }
+.header_tend_after_compression {
+    margin:-45% 0 0 -202%;
+    padding:0;
+    display:inline-block;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index:9999;
+    background: black;
+    border-radius: 5px;
+    border:1px solid white;
+}
 
 ul#header_menu li:hover ul {
     opacity: 1;
@@ -210,7 +225,20 @@ ul#menu li a:hover {
     background: white;
     box-shadow: black 0px 0px 10px;
 }
-
+.last_tend{
+    margin:2px 0 0 -35%;
+    padding:0;
+    display:inline-block;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index:9999;
+    background: white;
+    box-shadow: black 0px 0px 10px;
+}
 ul#menu li:hover ul {
     opacity: 1;
     visibility: visible;
