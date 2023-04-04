@@ -14,7 +14,6 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-
     /*
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -41,9 +40,8 @@
 }
 #mail_img{
     max-width: 100%;
-    order: 2;
     height: auto;
-    flex-grow: 2;
+    order: 2;
 }
 
 #header_drop_down{
