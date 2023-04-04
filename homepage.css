@@ -3,11 +3,17 @@
         display: none;
     }
 }
+@media screen and (max-width: 900px) {
+    div#header_drop_down {
+        display: none;
+    }
+}
 #header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 
     /*
     display: grid;
@@ -42,9 +48,7 @@
 
 #header_drop_down{
     order:3;
-    width: 10%;
     height: auto;
-
 }
 
 ul#header_menu{
@@ -98,7 +102,7 @@ ul#header_menu .first a:hover {
 }
 
 .header_tend {
-    margin:2px 0 0;
+    margin:-45% 0 0;
     padding:0;
     display:inline-block;
     list-style: none;
@@ -132,13 +136,16 @@ ul#header_menu ul a {
     white-space: nowrap;
     float: none;
     text-transform: none;
-    font-size: 70%;
+    font-size: 90%;
     color: white;
+    text-align: right;
 }
-ul#menu ul a:hover {
+ul#header_menu ul a:hover {
     background-color: darkred;
     color: white;
 }
+
+
 #drop-menu {
     margin: 0 auto;
     padding: 0;
@@ -261,6 +268,18 @@ ul#menu ul a:hover {
     font-size: smaller;
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
+.comment_under_bar a{
+    color: black;
+    text-decoration: none;
+}
+.comment_under_bar a:hover {
+    text-decoration: underline;
+}
+.comment_under_bar span{
+    color: gray;
+    font-size: smaller;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
 .img_under_bar{
     float: left;
     width: 100%;
@@ -288,6 +307,10 @@ ul#menu ul a:hover {
 .sub_under_bar div a{
     color: black;
     text-decoration: none;
+}
+.sub_under_bar div a:hover{
+    color: black;
+    text-decoration: underline;
 }
 
 
