@@ -563,11 +563,6 @@ input {
     margin-bottom: 5%;/*TODO verify*/
 }
 
-
-
-
-
-
 #main_content #articles article{/*for the articles spacing*/
     margin-bottom: 2%;
 }
@@ -675,6 +670,79 @@ input {
 
 .mug_p a:hover{
     text-decoration: underline;
+}
+/*gallery*/
+
+.under_gallery_title a{
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80%;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 3%;
+}
+.little_red{
+    color: #a9091f;
+    font-size: 60%;
+    text-decoration: none;
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.little_red a:hover{
+    text-decoration: none;
+}
+.under_gallery_title a:hover{
+    text-decoration: underline;
+}
+/*today's paper*/
+#today_paper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+.article_wrapper_rapid_paper{
+    overflow: hidden;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.article_text_for_paper{
+    float: right;
+    max-width: 75%;
+    height: auto;
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-align: left;
+    font-size: 90%;
+    color: #3e3e3e;
+    padding-left: 2%;
+}
+
+.article_text_for_paper a{
+    text-decoration: none;
+    color: black;
+    font-size: 90%;
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.article_text_for_paper a:hover {
+    text-decoration: underline;
+}
+/*sponsored content*/
+
+.article_wrapper_rapid_sponsored{
+    overflow: hidden;
+    padding: 2% 3% 2% 0.5%;
+    background-color: lightgrey;
+}
+
+.mini_title{
+    padding-top: 4%;
+    padding-bottom: 1%;
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100%;
+    color: #a9091f;
 }
 
 /*selector radio button*/
@@ -845,9 +913,6 @@ input {
     flex-wrap: nowrap;
     align-items: stretch;
 }
-
-
-
 
 #rapid_reactions{
     display: flex;
