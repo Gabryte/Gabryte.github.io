@@ -92,6 +92,45 @@
     max-width: 70%;
     color: white;
 }
+.journalist_col article{
+    overflow: hidden;
+}
+
+.journalist_col article figure{ /*for the wrapper of the right column images in the commentary section*/
+    float:left;
+    margin-left:0;
+    margin-right: 2%;
+    margin-bottom: 0;
+    max-width: 25%;
+    height: auto;
+}
+.journalist_col article p{
+    float: right;
+    padding-right: 1%;
+    max-width: 75%;
+    height: auto;
+}
+.journalist_col article h4 a{
+    font-family: Montserrat, Helmet, Freesans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.journalist_col article h4 a:hover{
+    text-decoration: underline;
+}
+
+.journalist_col article  p p a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: smaller;
+}
+.journalist_col article p p a:hover{
+    text-decoration: underline;
+}
 /* HTML old
 <form id="anim_form"><!--action="search.php" method="get"-->
 <!--<fieldset id="search_field_set">-->
