@@ -392,13 +392,15 @@ ul#menu ul a:hover {
 #main_content #middle_column{ /*for the middle column*/
     order: 2;
     flex-basis: 50%;
+    flex-grow: 2;
     max-width: 500px;
     flex-direction: column;
 }
 section#middle_column .front_article{
     color: #5b5b5b;
     border-bottom: 5px solid #ccc;
-    margin-bottom: 20px;
+    padding-bottom: 4%;
+    margin-bottom: 4%;
 }
 section#middle_column .front_article .main_article_title{
     font-size: 185%;
@@ -425,7 +427,7 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .main_article_img .donald_caption a:hover{
     text-decoration: underline;
-    color: blue;
+    color: #015fb6;
 }
 
 .main_article_img figure{
@@ -434,6 +436,49 @@ section#middle_column .front_article .main_article_title a:hover{
 .donald_img_pure{
     max-width: 100%;
     max-height: 100%;
+}
+.front_article .main_article_paragraph{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 100%;
+    color: #5b5b5b;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.under_link_bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.related{
+    flex-basis: 20%;
+    text-align: right;
+    padding-right: 3%;
+
+}
+.related p{
+    padding-top:0;
+    margin-top: 0;
+    font-size: 80%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+
+}
+.links{
+    flex-basis: 80%;
+    border-left: 2px solid #ccc;
+    padding-left: 3%;
+
+}
+.links a{
+    text-decoration: none;
+    color: #428bca;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 80%;
+}
+.links a:hover{
+    text-decoration: underline;
+    color: #015fb6;
 }
 
 #main_content #third_column{/*third column*/
@@ -584,7 +629,10 @@ input {
 .article_text{
     /*align-self: flex-end;*/
     padding-left: 2%;
+    margin-right: 0;
+    padding-right: 0;
     max-width: 75%;
+    font-size: 115%;
     float: left;/*TODO old float:right*/
     height: auto;
 
@@ -594,6 +642,13 @@ input {
     color: black;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: smaller;
+}
+
+.article_text a.main_title_col{
+    text-decoration: none;
+    color: black;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 100%;
 }
 /*for the commentary section*/
 .article_text h4 a{
@@ -928,6 +983,7 @@ input {
     font-size: 70%;
     color: #428bca;
 }
+
 .article_text sub .under_page:hover{
     text-decoration: underline;
     color: darkblue;
@@ -966,6 +1022,23 @@ input {
     padding: 2px;
 
 }
+.special{
+    max-width: 101px;
+    padding: 2px;
+}
+
+.special p{
+    color: #fff;
+    background-color: #8d4585;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.3em;
+    padding: 3px 4px;
+}
+
 .sub p{
     color: #fff;
     background-color: #a9091f;
