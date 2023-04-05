@@ -706,7 +706,7 @@ input {
     width: 15px;
     height: 15px;
     border-radius: 50px;
-    background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+    background: linear-gradient(to right bottom, hsl(0,100%,27.3%), HSL(0, 100%, 50%));
 }
 #QA .QA-design::before {
     content: '';
@@ -738,7 +738,11 @@ input {
     color: hsl(0, 0%, 40%);
 }
 
-
+.img_column{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
 
 
 .article_text a:hover{
@@ -777,12 +781,81 @@ input {
     text-decoration: underline;
 }
 
+.right_side_comment_header_rapid_photo{
+    margin: 5% 0 0;/*TODO revisit 2*/
+    text-transform: uppercase;
+    padding: 2% 0 0 4%;
+    background-color: #9ea7b3;
+    color: white;
+    font-size: 120%;
+
+}
+
+.right_side_comment_header_rapid_photo a{
+    color: white;
+    text-decoration: none;
+}
+.right_side_comment_header_rapid_photo a:hover{
+    text-decoration: underline;
+}
+
+#commentary_section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+#top_of_the_times{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+#media_spotlight{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+#Opinion{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+#Latest_cartoon{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+#Questions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+#photo_galleries{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+
+
+
 #rapid_reactions{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
 }
+
 
 .article_text .under_page{
     text-decoration: none;
