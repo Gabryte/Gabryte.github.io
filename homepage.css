@@ -1132,4 +1132,36 @@ input {
 .mug_graphic:hover{
     text-decoration: underline;
 }
+/*Main headers*/
+
+.line_header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    padding-top:6%;
+}
+
+.line_header a{
+    text-decoration: none;
+    color: #b00021;
+    font-weight: 700;
+    font-size: 120%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    flex-basis: 25%;
+}
+.line_header a:hover{
+    text-decoration: underline;
+}
+
+.line_header .span_line{
+    flex-basis:25%;
+    font-weight: 700;
+    font-size: 85%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    color: black;
+}
+
+
 
