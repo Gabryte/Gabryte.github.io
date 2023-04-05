@@ -583,9 +583,9 @@ input {
 
 .article_text{
     /*align-self: flex-end;*/
-    float: right;
     padding-left: 2%;
     max-width: 75%;
+    float: left;/*TODO old float:right*/
     height: auto;
 
 }
@@ -964,6 +964,7 @@ input {
 .sub{
     max-width: 113px;
     padding: 2px;
+
 }
 .sub p{
     color: #fff;
@@ -975,5 +976,87 @@ input {
     font-weight: 700;
     line-height: 1.3em;
     padding: 3px 5px;
+}
+
+/*right heading*/
+.section_vertical{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.ex_comment{
+    font-weight: 700;
+    font-size: 100%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    padding: 4% 0 4% 0;
+    text-decoration: none;
+    color: black;
+}
+.ex_comment_columns{
+    font-weight: 700;
+    font-size: 100%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    padding: 0 0 4% 0;
+    text-decoration: none;
+    color: black;
+}
+
+.ex_comment_columns_last{
+    font-weight: 700;
+    font-size: 100%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    padding: 0 0 5% 0;
+    border-bottom: 5px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+
+
+.mini_red_title{
+    font-size: 90%;
+    color: #a9091f;
+    padding: 4% 0 0 0;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+.mini_red_title:hover{
+    text-decoration: underline;
+}
+.ex_comment_last{
+    font-weight: 700;
+    font-size: 100%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    padding: 2% 0 5% 0;
+    text-decoration: none;
+    color: black;
+    border-bottom: 5px solid #ccc;
+}
+.ex_comment_last:hover{
+    text-decoration: underline;
+}
+.ex_comment:hover{
+    text-decoration: underline;
+}
+.ex_comment_columns:hover{
+    text-decoration: underline;
+}
+.college{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.mug_graphic{
+    color: #015fb6;
+    text-align: left;
+    font-size: small;
+    text-decoration: none;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+.mug_graphic:hover{
+    text-decoration: underline;
 }
 
