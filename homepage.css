@@ -976,6 +976,20 @@ input {
     align-items: stretch;
 }
 
+.media_link{
+    display: inline;
+}
+.pre_text{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 70%;
+    color: black;
+}
+.post_text{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 70%;
+    color: black;
+    font-style: oblique;
+}
 
 .article_text .under_page{
     text-decoration: none;
@@ -986,7 +1000,7 @@ input {
 
 .article_text sub .under_page:hover{
     text-decoration: underline;
-    color: darkblue;
+    color: #015fb6;
 }
 
 .article_wrapper_rapid{
@@ -1085,6 +1099,9 @@ input {
     text-decoration: none;
     color: black;
 }
+.ex_comment_columns_last:hover{
+    text-decoration: underline;
+}
 
 
 .mini_red_title{
@@ -1141,15 +1158,23 @@ input {
     align-items: stretch;
     justify-content: stretch;
     padding-top:6%;
+    padding-bottom: 6%;
 }
 
+.line_header div{
+    height: 0;
+    align-self: center;
+    flex-basis: 50%;
+    border: 1px solid #b00021;
+}
 .line_header a{
     text-decoration: none;
     color: #b00021;
     font-weight: 700;
-    font-size: 120%;
+    font-size: 125%;
     font-family: Signika,Helmet,Freesans,sans-serif;
     flex-basis: 25%;
+    text-transform: uppercase;
 }
 .line_header a:hover{
     text-decoration: underline;
@@ -1157,7 +1182,7 @@ input {
 
 .line_header .span_line{
     flex-basis:25%;
-    font-weight: 700;
+    text-align: right;
     font-size: 85%;
     font-family: Signika,Helmet,Freesans,sans-serif;
     color: black;
