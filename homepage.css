@@ -654,6 +654,28 @@ input {
     text-decoration: underline;
 }
 
+.mug_div{
+    padding-bottom: 5%;
+    border-bottom: 2px solid #ccc;
+}
+
+.mug_p{
+    color: black;
+    text-align: center;
+    font-size: 85%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mug_p a{
+    text-decoration: none;
+    color: black;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.mug_p a:hover{
+    text-decoration: underline;
+}
 
 
 .article_text a:hover{
@@ -730,6 +752,12 @@ input {
 .article_text sub .under_page_spot:hover{
     text-decoration: underline;
     color: black;
+}
+
+.cartoon{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
 }
 
 .sub{
