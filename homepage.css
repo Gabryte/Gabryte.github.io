@@ -1456,7 +1456,6 @@ section#middle_column .front_article .main_article_title a:hover{
     max-width: 500px;
     max-height: 500px;
 }
-
 .email_input_section{
     display: flex;
     flex-direction: row;
@@ -1464,6 +1463,36 @@ section#middle_column .front_article .main_article_title a:hover{
     align-items: stretch;
 }
 
+.email_input_section input{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: black 0px 0px 4px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    max-width: 40px;
+}
+.email_input_section input:focus{
+    max-width: 200px;
+    transition-duration: 1s;
+}
+.email_input_section input:hover{
+    max-width: 200px;
+    transition-duration: 1s;
+}
+.column_unit_check .sub_caption_title{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 65%;
+    color: black;
+    margin-top: 1%;
+
+}
+.column_unit_check .sub_caption_title a{
+    text-decoration: none;
+    color: #428bca;
+}
+.column_unit_check .sub_caption_title a{
+    text-decoration: underline;
+    color: #015fb6;
+}
 .email_button {
     text-align: center;
     font-family: Signika,Helmet,Freesans,sans-serif;

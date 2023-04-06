@@ -2073,10 +2073,11 @@
                         </label>
                     </div>
                 </div>
-                <div class="email_input_section">
-                    <input type="email" placeholder="Enter your email address...">
-                    <button class="email_button">Subscribe</button>
-                </div>
+                <form class="email_input_section">
+                    <input id="email_selector" type="email" name="email" placeholder="Enter your email address..." required="required">
+                    <button for="email_selector" class="email_button">Subscribe</button>
+                </form>
+                <p class="sub_caption_title"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a> / <a href="#">Manage Newsletters</a></p>
             </div>
         </div>
     </footer>
