@@ -1246,5 +1246,17 @@ input {
     color: black;
 }
 
+/*classes for sponsored content section main column*/
+
+.mini_sponsor{
+    padding-top: 4%;
+    padding-bottom: 1%;
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72%;
+    text-transform: uppercase;
+    color: #a9091f;
+}
 
 
