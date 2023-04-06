@@ -1423,13 +1423,13 @@ section#middle_column .front_article .main_article_title a:hover{
 /*last footer section*/
 .last_footer{
     margin-top: 0;
+    padding-top: 2%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: #e3e4e8;
+    border-bottom: 3px solid #ccc;
 }
 
 .column_unit_check h5{
@@ -1438,6 +1438,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Montserrat, Helmet, Freesans, sans-serif;
     text-transform: uppercase;
     margin-bottom: 0;
+    margin-top: 0;
     padding-bottom: 0;
 }
 
@@ -1456,6 +1457,30 @@ section#middle_column .front_article .main_article_title a:hover{
     max-width: 500px;
     max-height: 500px;
 }
+
+.column_unit_check .side{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    text-align: left;
+    border-left: 2px solid #ccc;
+    padding-left: 4%;
+}
+.column_unit_check .side a{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 100%;
+    text-decoration: none;
+    color: black;
+    margin-top: 2%;
+}
+.column_unit_check .side h5{
+    margin-top: 0;
+}
+.column_unit_check .side a:hover{
+    text-decoration: underline;
+}
+
 .email_input_section{
     display: flex;
     flex-direction: row;
@@ -1578,6 +1603,17 @@ section#middle_column .front_article .main_article_title a:hover{
 
 #check_box_section .QA-input:checked~.QA-text {
     color: hsl(0, 0%, 40%);
+}
+.last_footer_compartment{
+    margin-left: 15%;
+    margin-right: 15%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    padding-bottom: 3%;
 }
 
 
