@@ -91,7 +91,7 @@ ul#header_menu{
     float: left;
     margin:15% 0 0;
     padding: 0;
-    border: 2px solid black;
+    border: 2px solid #000;
     border-radius: 5px;
     background-color: white;
     font-size:80%;
@@ -99,7 +99,7 @@ ul#header_menu{
 }
 
 ul#header_menu .first {
-    background-color: black;
+    background-color: #000;
     margin:0;
     padding:0;
     float:left;
@@ -145,7 +145,7 @@ ul#header_menu .first a:hover {
     top: 38px;
     left: 0;
     z-index:9999;
-    background: black;
+    background: #000;
     border-radius: 5px;
     border:1px solid white;
 }
@@ -160,7 +160,7 @@ ul#header_menu .first a:hover {
     top: 38px;
     left: 0;
     z-index:9999;
-    background: black;
+    background: #000;
     border-radius: 5px;
     border:1px solid white;
 }
@@ -242,7 +242,7 @@ ul#menu li a {
 
 ul#menu li a:hover {
     background: white;
-    color: black;
+    color: #000;
 }
 
 .tend {
@@ -257,7 +257,7 @@ ul#menu li a:hover {
     left: 0;
     z-index:9999;
     background: white;
-    box-shadow: black 0px 0px 10px;
+    box-shadow: #000 0px 0px 10px;
 }
 .last_tend{
     margin:2px 0 0 -35%;
@@ -271,7 +271,7 @@ ul#menu li a:hover {
     left: 0;
     z-index:9999;
     background: white;
-    box-shadow: black 0px 0px 10px;
+    box-shadow: #000 0px 0px 10px;
 }
 ul#menu li:hover ul {
     opacity: 1;
@@ -281,7 +281,7 @@ ul#menu li:hover ul {
 ul#menu ul li {
     float: none;
     display: block;
-    color: black;
+    color: #000;
     border: 0;
 }
 
@@ -293,12 +293,12 @@ ul#menu ul a {
     float: none;
     text-transform: none;
     font-size: 70%;
-    color: black;
+    color: #000;
 }
 
 ul#menu ul a:hover {
     background-color: darkred;
-    color: black;
+    color: #000;
 }
 .under_bar{
     display: grid;
@@ -331,7 +331,7 @@ ul#menu ul a:hover {
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
 .comment_under_bar a{
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 .comment_under_bar a:hover {
@@ -360,17 +360,17 @@ ul#menu ul a:hover {
 }
 .sub_under_bar div{
     padding: 0 5px;
-    border-left: 1px solid black;
+    border-left: 1px solid #000;
     display: inline;
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
 .sub_under_bar div a{
-    color: black;
+    color: #000;
     text-transform: uppercase;
     text-decoration: none;
 }
 .sub_under_bar div a:hover{
-    color: black;
+    color: #000;
     text-decoration: underline;
 }
 
@@ -449,7 +449,7 @@ section#middle_column .front_article .main_article_title{
 }
 section#middle_column .front_article .main_article_title a{
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 section#middle_column .front_article .main_article_title a:hover{
    text-decoration: underline;
@@ -684,7 +684,7 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .article_text_large a{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: smaller;
 }
@@ -694,7 +694,7 @@ section#middle_column .front_article .main_article_title a:hover{
 
 .article_text_large a.main_title_col{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 100%;
 }
@@ -703,7 +703,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-style: normal;
     font-weight: 700;
     font-size: larger;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -711,7 +711,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-size: 92%;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -729,14 +729,14 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .article_text a{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: smaller;
 }
 
 .article_text a.main_title_col{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 100%;
 }
@@ -746,7 +746,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-style: normal;
     font-weight: 700;
     font-size: larger;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 .line{
@@ -764,7 +764,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
     font-style: normal;
     font-size: 92%;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 .journalist_col .article_text{
@@ -779,13 +779,13 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 
 .link_more_columnist{
-    color: black;
+    color: #000;
     text-align: right;
     font-size: small;
     text-transform: uppercase;
 }
 .link_more_columnist a{
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     text-decoration: none;
     font-size: 90%;
@@ -800,7 +800,7 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 
 .mug_p{
-    color: black;
+    color: #000;
     text-align: center;
     font-size: 85%;
     font-weight: 700;
@@ -809,7 +809,7 @@ section#middle_column .front_article .main_article_title a:hover{
 
 .mug_p a{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -823,7 +823,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-style: normal;
     font-weight: 700;
     font-size: 80%;
-    color: black;
+    color: #000;
     text-transform: uppercase;
     text-decoration: none;
     padding-top: 3%;
@@ -865,7 +865,7 @@ section#middle_column .front_article .main_article_title a:hover{
 
 .article_text_for_paper a{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-size: 90%;
     font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
 }
@@ -1070,12 +1070,12 @@ section#middle_column .front_article .main_article_title a:hover{
 .pre_text{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 70%;
-    color: black;
+    color: #000;
 }
 .post_text{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 70%;
-    color: black;
+    color: #000;
     font-style: oblique;
 }
 
@@ -1114,13 +1114,13 @@ section#middle_column .front_article .main_article_title a:hover{
 /*Media spotlight*/
 .article_text .under_page_spot{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 70%;
 }
 .article_text sub .under_page_spot:hover{
     text-decoration: underline;
-    color: black;
+    color: #000;
 }
 
 .cartoon{
@@ -1178,7 +1178,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Signika,Helmet,Freesans,sans-serif;
     padding: 4% 0 4% 0;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 .ex_comment_columns{
     font-weight: 700;
@@ -1186,7 +1186,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Signika,Helmet,Freesans,sans-serif;
     padding: 0 0 4% 0;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .ex_comment_columns_last{
@@ -1196,7 +1196,7 @@ section#middle_column .front_article .main_article_title a:hover{
     padding: 0 0 5% 0;
     border-bottom: 5px solid #ccc;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 .ex_comment_columns_last:hover{
     text-decoration: underline;
@@ -1218,7 +1218,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Signika,Helmet,Freesans,sans-serif;
     padding: 2% 0 5% 0;
     text-decoration: none;
-    color: black;
+    color: #000;
     border-bottom: 5px solid #ccc;
 }
 .ex_comment_last:hover{
@@ -1282,7 +1282,7 @@ section#middle_column .front_article .main_article_title a:hover{
     text-align: right;
     font-size: 85%;
     font-family: Signika,Helmet,Freesans,sans-serif;
-    color: black;
+    color: #000;
 }
 
 /*classes for sponsored content section main column*/
@@ -1346,7 +1346,7 @@ section#middle_column .front_article .main_article_title a:hover{
 .head_column_unit h3 a{
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: #000;
     font-weight: 700;
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 98%;
@@ -1359,7 +1359,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-size: 92%;
     font-weight: 700;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 .head_column_unit p a:hover{
     text-decoration: underline;
@@ -1372,7 +1372,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 88%;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 .sub_column_unit .sub_text:hover{
     text-decoration: underline;
@@ -1468,9 +1468,9 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .column_unit_check .side a{
     font-family: Signika,Helmet,Freesans,sans-serif;
-    font-size: 100%;
+    font-size: 110%;
     text-decoration: none;
-    color: black;
+    color: #000;
     margin-top: 2%;
 }
 .column_unit_check .side h5{
@@ -1490,7 +1490,7 @@ section#middle_column .front_article .main_article_title a:hover{
 .email_input_section input{
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-shadow: black 0px 0px 4px;
+    box-shadow: #000 0px 0px 4px;
     font-family: Signika,Helmet,Freesans,sans-serif;
     max-width: 40px;
 }
@@ -1505,7 +1505,7 @@ section#middle_column .front_article .main_article_title a:hover{
 .column_unit_check .sub_caption_title{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 65%;
-    color: black;
+    color: #000;
     margin-top: 1%;
 
 }
@@ -1533,10 +1533,10 @@ section#middle_column .front_article .main_article_title a:hover{
 
 }
 .email_button:hover{
-    border: 1px black solid;
+    border: 1px #000 solid;
 }
 .email_button:focus{
-    box-shadow: black 0px 0px 4px;
+    box-shadow: #000 0px 0px 4px;
 }
 
 
@@ -1614,6 +1614,17 @@ section#middle_column .front_article .main_article_title a:hover{
     justify-content: space-around;
     padding-bottom: 4%;
 }
+.last_footer_compartment_end{
+    margin-left: 15%;
+    margin-right: 15%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
 
 .column_unit_check .side_alt{
     display: flex;
@@ -1625,9 +1636,9 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .column_unit_check .side_alt a{
     font-family: Signika,Helmet,Freesans,sans-serif;
-    font-size: 100%;
+    font-size: 110%;
     text-decoration: none;
-    color: black;
+    color: #000;
     margin-top: 2%;
 }
 .column_unit_check .side_alt h5{
