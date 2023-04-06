@@ -1455,7 +1455,6 @@ section#middle_column .front_article .main_article_title a:hover{
     align-items: stretch;
     align-content: center;
     max-width: 500px;
-    max-height: 500px;
 }
 
 .column_unit_check .side{
@@ -1613,7 +1612,29 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-around;
-    padding-bottom: 3%;
+    padding-bottom: 4%;
+}
+
+.column_unit_check .side_alt{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    text-align: left;
+    padding-left: 4%;
+}
+.column_unit_check .side_alt a{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 100%;
+    text-decoration: none;
+    color: black;
+    margin-top: 2%;
+}
+.column_unit_check .side_alt h5{
+    margin-top: 0;
+}
+.column_unit_check .side_alt a:hover{
+    text-decoration: underline;
 }
 
 
