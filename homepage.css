@@ -383,7 +383,7 @@ ul#menu ul a:hover {
 }
 #main_content nav#articles{ /*left column*/
     order: 1;
-    flex-basis: 25%;
+    flex-basis: 20%;
     max-width: 425px;
     border-right: 1px solid gray;
     flex-direction: column;
@@ -391,7 +391,7 @@ ul#menu ul a:hover {
 }
 #main_content #middle_column{ /*for the middle column*/
     order: 2;
-    flex-basis: 50%;
+    flex-basis: 60%;
     flex-grow: 2;
     max-width: 500px;
     flex-direction: column;
@@ -484,7 +484,7 @@ section#middle_column .front_article .main_article_title a:hover{
 #main_content #third_column{/*third column*/
     order: 3;
     flex-direction: column;
-    flex-basis: 25%;
+    flex-basis: 20%;
     max-width: 425px;
     border-left: 1px solid gray;
     padding-left: 1%;
@@ -625,6 +625,55 @@ input {
     max-width: 25%;
     height: auto;
 }
+.img_article_large{
+    float:left;
+    max-width: 50%;
+    height: auto;
+}
+
+.article_text_large{
+    /*align-self: flex-end;*/
+    padding-left: 2%;
+    margin-right: 0;
+    padding-right: 0;
+    max-width: 50%;
+    font-size: 110%;
+    float: left;/*TODO old float:right*/
+    height: auto;
+}
+.article_text_large a{
+    text-decoration: none;
+    color: black;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: smaller;
+}
+.article_text_large a:hover{
+    text-decoration: underline;
+}
+
+.article_text_large a.main_title_col{
+    text-decoration: none;
+    color: black;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 100%;
+}
+.article_text_large h4 a{
+    font-family: Montserrat, Helmet, Freesans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: larger;
+    color: black;
+    text-decoration: none;
+}
+
+.article_text_large p a{
+    font-family: 'Open Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-size: 92%;
+    color: black;
+    text-decoration: none;
+}
+
 
 .article_text{
     /*align-self: flex-end;*/
@@ -632,7 +681,7 @@ input {
     margin-right: 0;
     padding-right: 0;
     max-width: 75%;
-    font-size: 115%;
+    font-size: 110%;
     float: left;/*TODO old float:right*/
     height: auto;
 
@@ -997,8 +1046,18 @@ input {
     font-size: 70%;
     color: #428bca;
 }
+.article_text_large .under_page{
+    text-decoration: none;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 70%;
+    color: #428bca;
+}
 
 .article_text sub .under_page:hover{
+    text-decoration: underline;
+    color: #015fb6;
+}
+.article_text_large sub .under_page:hover{
     text-decoration: underline;
     color: #015fb6;
 }
@@ -1038,7 +1097,8 @@ input {
 }
 .special{
     max-width: 101px;
-    padding: 2px;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .special p{
@@ -1102,8 +1162,6 @@ input {
 .ex_comment_columns_last:hover{
     text-decoration: underline;
 }
-
-
 .mini_red_title{
     font-size: 90%;
     color: #a9091f;
