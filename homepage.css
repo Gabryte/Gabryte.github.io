@@ -1281,6 +1281,7 @@ input {
     position: relative;
 }
 
+
 @media screen and (max-width: 1000px) {
     #footer_content .footer_header{
         max-width: 100%;
@@ -1304,7 +1305,6 @@ input {
 }
 
 #footer_content .footer_header h2{
-    position: absolute;
     background-color: #9ea7b3;
     color: #fff;
     font-size: 125%;
@@ -1316,10 +1316,10 @@ input {
 }
 .footer_img{
     z-index: 1;
-    position: absolute;
     margin-left: 2%;
     max-width: 72px;
     width: 100%;
     height: auto;
     overflow: visible;
+    float: left;
 }
