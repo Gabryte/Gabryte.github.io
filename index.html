@@ -1812,11 +1812,30 @@
                 <h3 class="right_side_comment_header_rapid">
                     <a href="#" title="Listen to our podcasts!" alt="PODCAST!!">Front page podcast</a>
                 </h3>
-                <div class="player">
-                </div>
-                <div class="play_list">
+                <div class="audio_wrapper">
+                    <img id="podcastPlay" onclick="play('podcast')" src="img/play1.png"></img>
+                    <audio id="podcast" ontimeupdate="updateTime()">
+                        <source src="audio/podcast.mp3" type="audio/mp3">
+                    </audio>
                 </div>
             </section>
+            <script>
+                var activeSong;
+                //Plays the song. Just pass the id of the audio element.
+                function play(id){
+                    //Sets the active song to the song being played. All other functions depend on this.
+                    activeSong = document.getElementById(id);
+                    //Plays the song defined in the audio tag.
+                    activeSong.play();
+
+                    //Calculates the starting volume percentage of the song.
+                    var percentageOfVolume = activeSong.volume / 1;
+                    var percentageOfVolumeMeter = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
+
+                    //Fills out the volume status bar.
+                    document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
+                }
+            </script>
         </aside>
     </section>
     <footer id="footer_content">

@@ -1,18 +1,5 @@
-@media only screen and (max-width: 1000px) {
-    #footer_content .footer_header{
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .footer_img{
-        z-index: 1;
-        position: absolute;
-        margin-left: 2%;
-        max-width: 60px;
-        width: 100%;
-        height: auto;
-        overflow: visible;
-    }
+@media only screen and (max-width: 1050px) {
+
     #main_content{ /*main content settings*/
         display: flex;
         flex-direction: row;
@@ -25,7 +12,7 @@
         order: 2;
         flex-basis: 100%;
         max-width: 425px;
-        min-width: 200px;
+        min-width: 300px;
         border: none;
         flex-direction: column;
         flex-grow: 100;
@@ -36,7 +23,7 @@
         flex-basis: 100%;
         flex-wrap: wrap;
         max-width: 500px;
-        min-width: 400px;
+        min-width: 300px;
         flex-direction: column;
         flex-grow: 100;
     }
@@ -46,11 +33,11 @@
         flex-basis: 100%;
         flex-grow: 100;
         max-width: 425px;
-        min-width: 200px;
+        min-width: 300px;
         border: none;
     }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 939px){
     .footer_img{
         display: none;
     }
@@ -87,7 +74,22 @@
     }
 }
 
-
+@media only screen and(max-width: 1000px) {
+    #footer_content .footer_header{
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .footer_img{
+        z-index: 1;
+        position: absolute;
+        margin-left: 2%;
+        max-width: 60px;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+}
 
 
 *{
@@ -1644,5 +1646,34 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .copyright_footer .sub_under_bar div a:hover{
     text-decoration: underline;
+}
+/*audio*/
+.audio_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    row-gap: 1%;
+}
+#podcastPlay{
+    align-self: flex-start;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    width: 30px;
+    height: 30px;
+    background: #a9091f;
+    border-radius: 50%;
+    border: none;
+    margin-top: 2%;
+    box-shadow: black 0 0 40px 2px;
+
+}
+.podcastPlay:hover{
+    border: 5px #000 solid;
+}
+.podcastPlay:active{
+    border: 5px #000 solid;
 }
 
