@@ -1658,7 +1658,7 @@ section#middle_column .front_article .main_article_title a:hover{
     margin-bottom: 2%;
     row-gap: 1%;
 }
-#podcastPlay{
+.podcastPlay{
     align-self: flex-start;
     font-family: Signika,Helmet,Freesans,sans-serif;
     width: 30px;
@@ -1671,9 +1671,9 @@ section#middle_column .front_article .main_article_title a:hover{
 
 }
 .podcastPlay:hover{
-    border: 5px #000 solid;
+    border: 2px #000 solid;
 }
 .podcastPlay:active{
-    border: 5px #000 solid;
+    border: 2px #000 solid;
 }
 

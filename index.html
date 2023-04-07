@@ -1813,7 +1813,7 @@
                     <a href="#" title="Listen to our podcasts!" alt="PODCAST!!">Front page podcast</a>
                 </h3>
                 <div class="audio_wrapper">
-                    <img id="podcastPlay" onclick="play('podcast')" src="img/play1.png"></img>
+                    <img class="podcastPlay" onclick="playPause('podcast')" src="img/play1.png"></img>
                     <audio id="podcast" ontimeupdate="updateTime()">
                         <source src="audio/podcast.mp3" type="audio/mp3">
                     </audio>
@@ -1834,6 +1834,22 @@
 
                     //Fills out the volume status bar.
                     document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
+                }
+                //Pauses the active song.
+                function playPause(id){
+
+                    //Sets the active song since one of the functions could be play.
+                    activeSong = document.getElementById(id);
+                    var img_button = document.getElementById(id).parentElement.children[0];
+
+                    //Checks to see if the song is paused, if it is, play it from where it left off otherwise pause it.
+                    if (activeSong.paused){
+                        activeSong.play();
+                        img_button.setAttribute("src", "img/pause1.png")
+                    }else{
+                        activeSong.pause();
+                        img_button.setAttribute("src", "img/play1.png")
+                    }
                 }
             </script>
         </aside>
