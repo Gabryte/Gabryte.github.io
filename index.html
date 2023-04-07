@@ -1814,6 +1814,7 @@
                 </h3>
                 <div class="audio_wrapper">
                     <img class="podcastPlay" onclick="playPause('podcast')" src="img/play1.png"></img>
+                    <img class="podcastPlay" onclick="stop('podcast')" src="img/stop.png">
                     <audio id="podcast" ontimeupdate="updateTime()">
                         <source src="audio/podcast.mp3" type="audio/mp3">
                     </audio>
@@ -1821,35 +1822,27 @@
             </section>
             <script>
                 var activeSong;
-                //Plays the song. Just pass the id of the audio element.
-                function play(id){
-                    //Sets the active song to the song being played. All other functions depend on this.
-                    activeSong = document.getElementById(id);
-                    //Plays the song defined in the audio tag.
-                    activeSong.play();
-
-                    //Calculates the starting volume percentage of the song.
-                    var percentageOfVolume = activeSong.volume / 1;
-                    var percentageOfVolumeMeter = document.getElementById('volumeMeter').offsetWidth * percentageOfVolume;
-
-                    //Fills out the volume status bar.
-                    document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
-                }
+                var play_button;
                 //Pauses the active song.
                 function playPause(id){
 
                     //Sets the active song since one of the functions could be play.
                     activeSong = document.getElementById(id);
-                    var img_button = document.getElementById(id).parentElement.children[0];
+                    play_button = document.getElementById(id).parentElement.children[0];
 
                     //Checks to see if the song is paused, if it is, play it from where it left off otherwise pause it.
                     if (activeSong.paused){
                         activeSong.play();
-                        img_button.setAttribute("src", "img/pause1.png")
+                        play_button.setAttribute("src", "img/pause1.png")
                     }else{
                         activeSong.pause();
-                        img_button.setAttribute("src", "img/play1.png")
+                        play_button.setAttribute("src", "img/play1.png")
                     }
+                }
+                function stop(){
+                    play_button.setAttribute("src", "img/play1.png")
+                    activeSong.currentTime = 0;
+                    activeSong.pause();
                 }
             </script>
         </aside>

@@ -1666,8 +1666,9 @@ section#middle_column .front_article .main_article_title a:hover{
     background: #a9091f;
     border-radius: 50%;
     border: none;
-    margin-top: 2%;
-    box-shadow: black 0 0 40px 2px;
+    margin-top: 3%;
+    margin-right: 4%;
+    box-shadow: black 0 0 45px 1px;
 
 }
 .podcastPlay:hover{
