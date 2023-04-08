@@ -1812,7 +1812,7 @@
                 </h3>
                 <div class="audio_wrapper">
                     <img class="podcastPlay" onclick="playPause('podcast')" src="img/play1.png"></img>
-                    <img class="stopButton" onclick="stop('podcast')" src="img/stop.png">
+                    <img class="podcastPlay" onclick="stop('podcast')" src="img/stop.png">
                     <div class="songSlider" onclick="setSongPosition(this,event)">
                         <div class="songTracker"></div>
                     </div>
@@ -1822,15 +1822,40 @@
                     </audio>
                     <script>
                         var audio = document.getElementById("podcast");
-                        var progressBar = document.querySelector(".songTracker");
-                        var inner = document.querySelector(".songTimer");
+                        var progressBar = document.getElementsByClassName("songTracker")[0];
+                        var inner = document.getElementsByClassName("songTimer")[0];
 
                         audio.addEventListener("timeupdate", function(){
                             var progress = (audio.currentTime / audio.duration) * 100;
                             progressBar.style.width = progress + "%";
                             var currentSeconds = (Math.floor(activeSong.currentTime % 60) < 10 ? '0' : '') + Math.floor(activeSong.currentTime % 60);
                             var currentMinutes = Math.floor(activeSong.currentTime / 60);
-                            inner.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSong.duration / 60) + ":" + (Math.floor(activeSong.duration % 60) < 10 ? '0' : '') + Math.floor(activeSong.duration % 60);
+                            inner.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSong.duration / 60) + ":" + (Math.floor(audio.duration % 60) < 10 ? '0' : '') + Math.floor(activeSong.duration % 60);
+
+                        });
+                    </script>
+                </div>
+                <div class="audio_wrapper">
+                    <img class="podcastPlay" onclick="playPauseSecond('podcast2')" src="img/play1.png"></img>
+                    <img class="podcastPlay" onclick="stopSecond('podcast2')" src="img/stop.png">
+                    <div class="songSlider" onclick="setSongPositionSecond(this,event)">
+                        <div class="songTracker"></div>
+                    </div>
+                    <span class="songTimer">00:00/12:58</span>
+                    <audio id="podcast2">
+                        <source src="audio/podcast22.mp3" type="audio/mp3">
+                    </audio>
+                    <script>
+                        var audioSecond = document.getElementById("podcast2");
+                        var progressBarSecond = document.getElementsByClassName("songTracker")[1];
+                        var innerSecond = document.getElementsByClassName("songTimer")[1]
+
+                        audioSecond.addEventListener("timeupdate", function(){
+                            var progress = (audioSecond.currentTime / audioSecond.duration) * 100;
+                            progressBarSecond.style.width = progress + "%";
+                            var currentSeconds = (Math.floor(activeSongSecond.currentTime % 60) < 10 ? '0' : '') + Math.floor(activeSongSecond.currentTime % 60);
+                            var currentMinutes = Math.floor(activeSongSecond.currentTime / 60);
+                            innerSecond.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSongSecond.duration / 60) + ":" + (Math.floor(activeSongSecond.duration % 60) < 10 ? '0' : '') + Math.floor(activeSongSecond.duration % 60);
 
                         });
                     </script>
@@ -1839,9 +1864,10 @@
             </section>
             <script>
                 var activeSong;
+                var activeSongSecond;
                 var play_button;
                 function playPause(id){
-                    activeSong = document.getElementById(id);
+                    activeSong= document.getElementById(id);
                     play_button = document.getElementById(id).parentElement.children[0];
 
                     if (activeSong.paused){
@@ -1874,6 +1900,42 @@
                     //Sets the song location with the percentage.
                     setLocation(percentage);
                 }
+
+                function playPauseSecond(id){
+                    activeSongSecond= document.getElementById(id);
+                    play_button = document.getElementById(id).parentElement.children[0];
+
+                    if (activeSongSecond.paused){
+                        activeSongSecond.play();
+                        play_button.setAttribute("src", "img/pause1.png")
+                        play_button.style.boxShadow = "darkcyan 0 0 45px 1px";
+                    }else{
+                        activeSongSecond.pause();
+                        play_button.setAttribute("src", "img/play1.png")
+                        play_button.style.boxShadow = "black 0 0 45px 1px";
+                    }
+                }
+                function stopSecond(id){
+                    if(!activeSongSecond.paused) {
+                        playPauseSecond(id);
+                    }
+                    activeSongSecond.currentTime = 0;
+                    activeSongSecond.pause();
+                }
+                function setLocationSecond(percentage){
+                    activeSongSecond.currentTime = activeSongSecond.duration * percentage;
+                }
+                function setSongPositionSecond(obj,e){
+                    //Gets the offset from the left so it gets the exact location.
+                    var songSliderWidth = obj.offsetWidth;
+                    var evtobj=window.event? event : e;
+                    clickLocation = evtobj.layerX - obj.offsetLeft;
+
+                    var percentage = (clickLocation/songSliderWidth);
+                    //Sets the song location with the percentage.
+                    setLocationSecond(percentage);
+                }
+
             </script>
         </aside>
     </section>
