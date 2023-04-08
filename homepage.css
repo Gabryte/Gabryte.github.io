@@ -1125,7 +1125,12 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-wrap: nowrap;
     align-items: stretch;
 }
-
+#podcast_sticky{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
 .ex_comment{
     font-weight: 700;
     font-size: 100%;
@@ -1676,5 +1681,26 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .podcastPlay:active{
     border: 2px #000 solid;
+}
+.songSlider{
+    width:50%;
+    margin-top: 3%;
+    height:8px;
+    background: #a9091f;
+    border-radius: 50px;
+    border: none;
+    box-shadow: black 0 0 45px 1px;
+}
+.songTimer{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 90%;
+    color: #a9091f;
+}
+.songTracker{
+    width: 0%;
+    height: 8px;
+    background: black;
+    box-shadow: black 0 0 45px 1px;
+    border-radius: 50px;
 }
 
