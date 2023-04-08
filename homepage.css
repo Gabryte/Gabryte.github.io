@@ -37,6 +37,39 @@
         border: none;
     }
 }
+@media only screen and (min-width: 1051px) {
+
+    #main_content{ /*main content settings*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 1%;
+        justify-content: center;
+        align-items: stretch;
+    }
+    #main_content nav#articles{ /*left column*/
+        order: 1;
+        flex-basis: 20%;
+        max-width: 425px;
+        border-right: 1px solid gray;
+        flex-direction: column;
+        padding-right: 1%;
+    }
+    #main_content #middle_column{ /*for the middle column*/
+        order: 2;
+        flex-basis: 60%;
+        max-width: 500px;
+        flex-direction: column;
+    }
+    #main_content #third_column{/*third column*/
+        order: 3;
+        flex-direction: column;
+        flex-basis: 20%;
+        max-width: 425px;
+        border-left: 1px solid gray;
+        padding-left: 1%;
+    }
+}
 @media only screen and (max-width: 939px){
     .footer_img{
         display: none;
@@ -425,29 +458,6 @@ ul#menu ul a:hover {
     text-decoration: underline;
 }
 
-
-#main_content{ /*main content settings*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 1%;
-    justify-content: center;
-    align-items: stretch;
-}
-#main_content nav#articles{ /*left column*/
-    order: 1;
-    flex-basis: 20%;
-    max-width: 425px;
-    border-right: 1px solid gray;
-    flex-direction: column;
-    padding-right: 1%;
-}
-#main_content #middle_column{ /*for the middle column*/
-    order: 2;
-    flex-basis: 60%;
-    max-width: 500px;
-    flex-direction: column;
-}
 section#middle_column .front_article{
     color: #5b5b5b;
     border-bottom: 5px solid #ccc;
@@ -533,14 +543,7 @@ section#middle_column .front_article .main_article_title a:hover{
     color: #015fb6;
 }
 
-#main_content #third_column{/*third column*/
-    order: 3;
-    flex-direction: column;
-    flex-basis: 20%;
-    max-width: 425px;
-    border-left: 1px solid gray;
-    padding-left: 1%;
-}
+
 
 #follow_bar{
     font-size: 150%;
