@@ -1812,81 +1812,58 @@
                 </h3>
                 <div class="audio_wrapper">
                     <img class="podcastPlay" onclick="playPause('podcast')" src="img/play1.png"></img>
-                    <img class="podcastPlay" onclick="stop('podcast')" src="img/stop.png">
+                    <img class="stopButton" onclick="stop('podcast')" src="img/stop.png">
                     <div class="songSlider" onclick="setSongPosition(this,event)">
                         <div class="songTracker"></div>
                     </div>
-                    <span class="songTimer"></span>
-                    <audio id="podcast" ontimeupdate="updateTime()">
+                    <span class="songTimer">00:00/2:00</span>
+                    <audio id="podcast">
                         <source src="audio/podcast.mp3" type="audio/mp3">
                     </audio>
+                    <script>
+                        var audio = document.getElementById("podcast");
+                        var progressBar = document.querySelector(".songTracker");
+                        var inner = document.querySelector(".songTimer");
 
+                        audio.addEventListener("timeupdate", function(){
+                            var progress = (audio.currentTime / audio.duration) * 100;
+                            progressBar.style.width = progress + "%";
+                            var currentSeconds = (Math.floor(activeSong.currentTime % 60) < 10 ? '0' : '') + Math.floor(activeSong.currentTime % 60);
+                            var currentMinutes = Math.floor(activeSong.currentTime / 60);
+                            inner.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSong.duration / 60) + ":" + (Math.floor(activeSong.duration % 60) < 10 ? '0' : '') + Math.floor(activeSong.duration % 60);
+
+                        });
+                    </script>
                 </div>
-                <script>
-                    var audio = document.getElementById("podcast");
-                    var progressBar = document.querySelector(".songTracker");
 
-                    audio.addEventListener("timeupdate", function(){
-                        var progress = (audio.currentTime / audio.duration) * 100;
-                        progressBar.style.width = progress + "%";
-                    });
-                </script>
             </section>
             <script>
                 var activeSong;
                 var play_button;
-
-
-                //Pauses the active song.
                 function playPause(id){
-                    //Sets the active song since one of the functions could be play.
                     activeSong = document.getElementById(id);
                     play_button = document.getElementById(id).parentElement.children[0];
 
-                    //Checks to see if the song is paused, if it is, play it from where it left off otherwise pause it.
                     if (activeSong.paused){
                         activeSong.play();
                         play_button.setAttribute("src", "img/pause1.png")
+                        play_button.style.boxShadow = "darkcyan 0 0 45px 1px";
                     }else{
                         activeSong.pause();
                         play_button.setAttribute("src", "img/play1.png")
+                        play_button.style.boxShadow = "black 0 0 45px 1px";
                     }
                 }
-                function stop(){
-                    play_button.setAttribute("src", "img/play1.png")
+                function stop(id){
+                    if(!activeSong.paused) {
+                        playPause(id);
+                    }
                     activeSong.currentTime = 0;
                     activeSong.pause();
                 }
-                //Updates the current time function so it reflects where the user is in the song.
-                //This function is called whenever the time is updated. This keeps the visual in sync with the actual time.
-                /*
-                function updateTime(){
-                    var currentSeconds = (Math.floor(activeSong.currentTime % 60) < 10 ? '0' : '') + Math.floor(activeSong.currentTime % 60);
-                    var currentMinutes = Math.floor(activeSong.currentTime / 60);
-
-                    //Sets the current song location compared to the song duration.
-                    document.getElementById("podcast_sticky").children[1].getElementsByClassName('songTimer').innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSong.duration / 60) + ":" + (Math.floor(activeSong.duration % 60) < 10 ? '0' : '') + Math.floor(activeSong.duration % 60);
-
-                    //Fills out the slider with the appropriate position.
-                    var percentageOfSong = (activeSong.currentTime/activeSong.duration);
-                    var percentageOfSlider = document.getElementById("podcast_sticky").children[1].getElementsByClassName('songSlider').offsetWidth * percentageOfSong;
-
-                    //Updates the track progress div.
-                    document.getElementById('songTracker').style.width = Math.round(percentageOfSlider) + "px";
-                }*/
-
-                /*
-                Gets the percentage of the click on the slider to set the song position accordingly.
-                Source for Object event and offset: http://website-engineering.blogspot.com/2011/04/get-x-y-coordinates-relative-to-div-on.html
-                */
-                //Sets the location of the song based off of the percentage of the slider clicked.
                 function setLocation(percentage){
                     activeSong.currentTime = activeSong.duration * percentage;
                 }
-                /*
-                Gets the percentage of the click on the slider to set the song position accordingly.
-                Source for Object event and offset: http://website-engineering.blogspot.com/2011/04/get-x-y-coordinates-relative-to-div-on.html
-                */
                 function setSongPosition(obj,e){
                     //Gets the offset from the left so it gets the exact location.
                     var songSliderWidth = obj.offsetWidth;

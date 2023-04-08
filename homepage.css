@@ -1682,6 +1682,28 @@ section#middle_column .front_article .main_article_title a:hover{
 .podcastPlay:active{
     border: 2px #000 solid;
 }
+.stopButton{
+    align-self: flex-start;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    width: 30px;
+    height: 30px;
+    background: #a9091f;
+    border-radius: 50%;
+    border: none;
+    margin-top: 3%;
+    margin-right: 4%;
+    box-shadow: black 0 0 45px 1px;
+}
+.stopButton:hover{
+    border: 2px #000 solid;
+    box-shadow: darkcyan 0 0 45px 1px
+}
+.stopButton:active{
+    border: 2px #000 solid;
+    box-shadow: darkcyan 0 0 45px 1px
+}
+
+
 .songSlider{
     width:50%;
     margin-top: 3%;
@@ -1689,18 +1711,19 @@ section#middle_column .front_article .main_article_title a:hover{
     background: #a9091f;
     border-radius: 50px;
     border: none;
-    box-shadow: black 0 0 45px 1px;
 }
 .songTimer{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 90%;
     color: #a9091f;
+    margin-top:2.5%;
+    margin-left: 3%;
 }
 .songTracker{
     width: 0%;
     height: 8px;
-    background: black;
-    box-shadow: black 0 0 45px 1px;
+    background: #428bca;
+    box-shadow: darkcyan 0 0 45px 1px;
     border-radius: 50px;
 }
 
