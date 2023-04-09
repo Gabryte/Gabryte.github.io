@@ -1711,4 +1711,21 @@ section#middle_column .front_article .main_article_title a:hover{
     border-radius: 50px;
 }
 
-
+.vote_wrapper{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3%;
+}
+.vote_wrapper .under_page{
+    text-decoration: none;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 70%;
+    color: #428bca;
+    margin-top: 1%;
+}
+.vote_wrapper .under_page:hover{
+    text-decoration: underline;
+    color: #015fb6;
+}

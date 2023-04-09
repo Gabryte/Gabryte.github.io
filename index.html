@@ -1734,7 +1734,7 @@
 
                 <div id="question_section">
                     <h4>Was the media coverage of former President Trump's court appearance appropriate?</h4>
-                    <div id="QA">
+                    <form id="QA">
                       <label class="QA-label">
                         <input type="radio" class="QA-input" name="QA">
                         <div class="QA-design"></div>
@@ -1752,8 +1752,11 @@
                         <div class="QA-design"></div>
                         <div class="QA-text">I did not watch the coverage</div>
                      </label>
+                    </form>
+                    <div class="vote_wrapper">
+                    <button for="QA" class="email_button">Vote</button>
+                        <a href="#" class="under_page">View results</a>
                     </div>
-
                 </div>
                 <div class="mug_div">
                     <p class="mug_p">
@@ -1827,7 +1830,7 @@
                     <div class="songSlider" onclick="setSongPosition(this,event,1)">
                         <div class="songTracker"></div>
                     </div>
-                    <span class="songTimer">00:00/12:58</span>
+                    <span class="songTimer">00:00/2:00</span>
                     <audio id="podcast2">
                         <source src="audio/podcast3.mp3" type="audio/mp3">
                     </audio>
