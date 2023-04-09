@@ -1431,7 +1431,7 @@ section#middle_column .front_article .main_article_title a:hover{
 .email_input_section input{
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-shadow: #000 0px 0px 4px;
+    box-shadow: #000 0 0 4px;
     font-family: Signika,Helmet,Freesans,sans-serif;
     max-width: 40px;
 }
@@ -1477,7 +1477,7 @@ section#middle_column .front_article .main_article_title a:hover{
     border: 1px #000 solid;
 }
 .email_button:focus{
-    box-shadow: #000 0px 0px 4px;
+    box-shadow: #000 0 0 4px;
 }
 
 
@@ -1704,7 +1704,7 @@ section#middle_column .front_article .main_article_title a:hover{
     margin-left: 3%;
 }
 .songTracker{
-    width: 0%;
+    width: 0;
     height: 8px;
     background: #428bca;
     box-shadow: darkcyan 0 0 45px 1px;
