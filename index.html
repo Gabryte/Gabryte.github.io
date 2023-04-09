@@ -1820,19 +1820,6 @@
                     <audio id="podcast">
                         <source src="audio/podcast.mp3" type="audio/mp3">
                     </audio>
-                    <script>
-                        var audio = document.getElementById("podcast");
-                        var progressBar = document.getElementsByClassName("songTracker")[0];
-                        var inner = document.getElementsByClassName("songTimer")[0];
-
-                        audio.addEventListener("timeupdate", function(){
-                            var progress = (audio.currentTime / audio.duration) * 100;
-                            progressBar.style.width = progress + "%";
-                            var currentSeconds = (Math.floor(audio.currentTime % 60) < 10 ? '0' : '') + Math.floor(audio.currentTime % 60);
-                            var currentMinutes = Math.floor(audio.currentTime / 60);
-                            inner.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audio.duration / 60) + ":" + (Math.floor(audio.duration % 60) < 10 ? '0' : '') + Math.floor(audio.duration % 60);
-                        });
-                    </script>
                 </div>
                 <div class="audio_wrapper">
                     <img class="podcastPlay" onclick="playPause('podcast2',1)" src="img/play1.png"></img>
@@ -1844,20 +1831,6 @@
                     <audio id="podcast2">
                         <source src="audio/podcast3.mp3" type="audio/mp3">
                     </audio>
-                    <script>
-                        var audioSecond = document.getElementById("podcast2");
-                        var progressBarSecond = document.getElementsByClassName("songTracker")[1];
-                        var innerSecond = document.getElementsByClassName("songTimer")[1]
-
-                        audioSecond.addEventListener("timeupdate", function(){
-                            var progress = (audioSecond.currentTime / audioSecond.duration) * 100;
-                            progressBarSecond.style.width = progress + "%";
-                            var currentSeconds = (Math.floor(audioSecond.currentTime % 60) < 10 ? '0' : '') + Math.floor(audioSecond.currentTime % 60);
-                            var currentMinutes = Math.floor(audioSecond.currentTime / 60);
-                            innerSecond.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audioSecond.duration / 60) + ":" + (Math.floor(audioSecond.duration % 60) < 10 ? '0' : '') + Math.floor(audioSecond.duration % 60);
-
-                        });
-                    </script>
                 </div>
                 <div class="audio_wrapper">
                     <img class="podcastPlay" onclick="playPause('podcast3',2)" src="img/play1.png"></img>
@@ -1869,20 +1842,24 @@
                     <audio id="podcast3">
                         <source src="audio/podcast3.mp3" type="audio/mp3">
                     </audio>
-                    <script>
-                        var audioThird = document.getElementById("podcast3")
-                        var progressBarThird = document.getElementsByClassName("songTracker")[2];
-                        var innerThird = document.getElementsByClassName("songTimer")[2]
-
-                        audioThird.addEventListener("timeupdate", function(){
-                            var progress = (audioThird.currentTime / audioThird.duration) * 100;
-                            progressBarThird.style.width = progress + "%";
-                            var currentSeconds = (Math.floor(audioThird.currentTime % 60) < 10 ? '0' : '') + Math.floor(audioThird.currentTime % 60);
-                            var currentMinutes = Math.floor(audioThird.currentTime / 60);
-                            innerThird.innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audioThird.duration / 60) + ":" + (Math.floor(audioThird.duration % 60) < 10 ? '0' : '') + Math.floor(audioThird.duration % 60);
-                        });
-                    </script>
                 </div>
+                <script>
+                    var audios = Array(3);
+                    audios = document.getElementsByTagName("audio");
+                    var progressBar = Array(3);
+                    progressBar = document.getElementsByClassName("songTracker");
+                    var inner = Array(3);
+                    inner = document.getElementsByClassName("songTimer");
+                    for (let i = 0; i < 3; i++) {
+                        audios[i].addEventListener("timeupdate", function(){
+                            var progress = (audios[i].currentTime / audios[i].duration) * 100;
+                            progressBar[i].style.width = progress + "%";
+                            var currentSeconds = (Math.floor(audios[i].currentTime % 60) < 10 ? '0' : '') + Math.floor(audios[i].currentTime % 60);
+                            var currentMinutes = Math.floor(audios[i].currentTime / 60);
+                            inner[i].innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+                        });
+                    }
+                </script>
             </section>
             <script>
                 var activeSong = new Array(3);
