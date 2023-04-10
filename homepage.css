@@ -1846,14 +1846,14 @@ section#middle_column .front_article .main_article_title a:hover{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    border: 2px solid #000;
+    border: 2px solid midnightblue;
     border-radius: 5px;
     padding:2%;
 }
 .scroller h5{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 80%;
-    color: #000;
+    color: midnightblue;
     text-align: left;
     padding-bottom: 1%;
     margin: 1px 5% 0;
