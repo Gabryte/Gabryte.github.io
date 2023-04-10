@@ -357,31 +357,30 @@ ul#header_menu ul a:hover {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 38px;
+    top: 40px;
     left: 0;
-    z-index:9999;
+    z-index:1;
     background: #000;
     border-radius: 5px;
     border:1px solid white;
 }
 
-.header_tend_for_bar {
+.header_tend_for_bar{
     margin:-45% 0 0;
     padding:0;
+    width: 175%;
     display:inline-block;
     list-style: none;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 38px;
+    top: 82px;
     left: 0;
-    z-index:9999;
+    z-index:3;
     background: #000;
     border-radius: 5px;
     border:1px solid white;
 }
-
-
 
 #drop-menu {
     margin: 0 auto;

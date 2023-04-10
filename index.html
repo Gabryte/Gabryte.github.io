@@ -153,13 +153,13 @@
             <div class="transparent_wrapper">
                 <ol id="nested_header_menu">
                     <li class="first"><a href="#" title="Subscribe"><strong>Subscribe</strong></a></li>
-                    <li class="second"><a href="#" title="SignIn"><strong>SignIn</strong></a>
-                        <ol class="header_tend">
-                            <li><a href="#"><strong>SignIn</strong></a></li>
-                            <li><a href="#"><strong>Today's E-Edition</strong></a></li>
-                            <li><a href="#"><strong>NewsLetter</strong></a></li>
-                            <li><a href="#"><strong>SignUp</strong></a></li>
-                            <li><a href="#"><strong>Correction</strong></a></li>
+                    <li class="second"><a title="SignIn"><strong>SignIn</strong></a>
+                        <ol class="header_tend_for_bar">
+                            <li><a><strong>SignIn</strong></a></li>
+                            <li><a><strong>Today's E-Edition</strong></a></li>
+                            <li><a><strong>NewsLetter</strong></a></li>
+                            <li><a><strong>SignUp</strong></a></li>
+                            <li><a><strong>Correction</strong></a></li>
                         </ol>
                     </li>
 
@@ -178,10 +178,10 @@
                     document.getElementsByClassName("header_tend")[0].style.margin ="-45% 0 0";
                 }
 
-                if(width < 1440){
-                    document.getElementsByClassName("header_tend")[1].style.margin ="-45% 0 0 -202%";
+                if(width < 1581){
+                    document.getElementsByClassName("header_tend_for_bar")[0].style.margin ="-45% 0 0 -74%";
                 }else{
-                    document.getElementsByClassName("header_tend")[1].style.margin ="-45% 0 0";
+                    document.getElementsByClassName("header_tend_for_bar")[0].style.margin ="-45% 0 0";
                 }
             }, true);
         </script>
