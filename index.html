@@ -1928,78 +1928,78 @@
                 <div class="scroller">
                     <h5>Alvin Bragg built Trump charges on shaky legal</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast',0)" src="img/play1.png" alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast',0)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="playPause('podcast0',0)" src="img/play1.png" alt="Play Button">
+                        <img class="podcastPlay" onclick="stop('podcast0',0)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,0)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/2:00</span>
-                        <audio id="podcast">
+                        <audio id="podcast0">
                             <source src="audio/podcast.mp3" type="audio/mp3">
                         </audio>
                     </div>
                     <h5>Massive forbidden deals about Biden's son</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast2',1)" src="img/play1.png"
+                        <img class="podcastPlay" onclick="playPause('podcast1',1)" src="img/play1.png"
                              alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast2',1)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="stop('podcast1',1)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,1)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/2:00</span>
-                        <audio id="podcast2">
+                        <audio id="podcast1">
                             <source src="audio/podcast3.mp3" type="audio/mp3">
                         </audio>
                     </div>
                     <h5>Biden discarded spy laptops</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast3',2)" src="img/play1.png"
+                        <img class="podcastPlay" onclick="playPause('podcast2',2)" src="img/play1.png"
                              alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast3',2)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="stop('podcast2',2)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,2)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/2:00</span>
-                        <audio id="podcast3">
+                        <audio id="podcast2">
                             <source src="audio/podcast4.mp3" type="audio/mp3">
                         </audio>
                     </div>
                     <h5>Zelensky and Ukraine</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast4',3)" src="img/play1.png"
+                        <img class="podcastPlay" onclick="playPause('podcast3',3)" src="img/play1.png"
                              alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast4',3)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="stop('podcast3',3)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,3)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/1:13</span>
-                        <audio id="podcast4">
+                        <audio id="podcast3">
                             <source src="audio/podcastZel.mp3" type="audio/mp3">
                         </audio>
                     </div>
                     <h5>Trump speaks about ventilators</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast5',4)" src="img/play1.png"
+                        <img class="podcastPlay" onclick="playPause('podcast4',4)" src="img/play1.png"
                              alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast5',4)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="stop('podcast4',4)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,4)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/0:50</span>
-                        <audio id="podcast5">
+                        <audio id="podcast4">
                             <source src="audio/podcastTrump.mp3" type="audio/mp3">
                         </audio>
                     </div>
                     <h5>Biden responds to Journalist</h5>
                     <div class="audio_wrapper">
-                        <img class="podcastPlay" onclick="playPause('podcast6',5)" src="img/play1.png"
+                        <img class="podcastPlay" onclick="playPause('podcast5',5)" src="img/play1.png"
                              alt="Play Button">
-                        <img class="podcastPlay" onclick="stop('podcast6',5)" src="img/stop.png" alt="Stop Button">
+                        <img class="podcastPlay" onclick="stop('podcast5',5)" src="img/stop.png" alt="Stop Button">
                         <div class="songSlider" onclick="setSongPosition(this,event,5)">
                             <div class="songTracker"></div>
                         </div>
                         <span class="songTimer">00:00/0:10</span>
-                        <audio id="podcast6">
+                        <audio id="podcast5">
                             <source src="audio/bidenPodCast.mp3" type="audio/mp3">
                         </audio>
                     </div>
@@ -2008,8 +2008,18 @@
             <script>
                 let audiosTot = 6;
                 let activeSong = new Array(audiosTot);
+                for (let i = 0; i < audiosTot; i++) {
+                    activeSong[i] = document.getElementById("podcast" + i);
+                }
                 let play_button;
                 function playPause(id,index){
+                    for(let i = 0; i < audiosTot; i++){
+                        if(i !== index && !activeSong[i].paused){
+                            activeSong[i].pause();
+                            play_button.setAttribute("src", "img/play1.png")
+                            play_button.style.boxShadow = "black 0 0 45px 1px";
+                        }
+                    }
                     activeSong[index] = document.getElementById(id);
                     play_button = document.getElementById(id).parentElement.children[0];
 
