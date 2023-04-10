@@ -128,6 +128,11 @@
 *{
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, Helmet, Freesans, sans-serif;
     font-style: normal;
@@ -1768,8 +1773,9 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    border-bottom: 2px solid #ccc;
+    margin: 5%;
+    padding-bottom: 5%;
     row-gap: 1%;
 }
 .podcastPlay{
@@ -1834,4 +1840,22 @@ section#middle_column .front_article .main_article_title a:hover{
 .vote_wrapper .under_page:hover{
     text-decoration: underline;
     color: #015fb6;
+}
+
+.scroller{
+    height: 250px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.scroller h5{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 80%;
+    color: #000;
+    margin-left: 5%;
+    margin-top: 1px;
+    margin-bottom: 0;
+    text-align: left;
 }
