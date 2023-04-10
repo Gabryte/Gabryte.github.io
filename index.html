@@ -25,13 +25,13 @@
         </figure>
 
         <figure>
-            <a href="#" title="NewsLetter" ><img alt="mailToUs" id="mail_img" src="img/mail.png"></a>
+            <a href="#" title="NewsLetter" ><img alt="mailToUs" class="mail_img" src="img/mail.png"></a>
         </figure>
         <div id="header_drop_down">
             <ul id="header_menu">
                 <li class="first"><a href="#" title="Subscribe"><strong>Subscribe</strong></a></li>
                 <li class="second"><a href="#" title="SignIn"><strong>SignIn</strong></a>
-                    <ul class="header_tend_after_compression">
+                    <ul class="header_tend">
                         <li><a href="#"><strong>SignIn</strong></a></li>
                         <li><a href="#"><strong>Today's E-Edition</strong></a></li>
                         <li><a href="#"><strong>NewsLetter</strong></a></li>
@@ -146,21 +146,72 @@
                     <li><a href="#"><strong>Immigration</strong></a></li>
                 </ul>
             </li>
+
+            <li class="transparent_wrapper">
+                <a href="#" title="NewsLetter" ><img alt="mailToUs" class="mail_img" src="img/mail.png"></a>
+            </li>
+            <div class="transparent_wrapper">
+                <ol id="nested_header_menu">
+                    <li class="first"><a href="#" title="Subscribe"><strong>Subscribe</strong></a></li>
+                    <li class="second"><a href="#" title="SignIn"><strong>SignIn</strong></a>
+                        <ol class="header_tend">
+                            <li><a href="#"><strong>SignIn</strong></a></li>
+                            <li><a href="#"><strong>Today's E-Edition</strong></a></li>
+                            <li><a href="#"><strong>NewsLetter</strong></a></li>
+                            <li><a href="#"><strong>SignUp</strong></a></li>
+                            <li><a href="#"><strong>Correction</strong></a></li>
+                        </ol>
+                    </li>
+
+                </ol>
+            </div>
         </ul>
+        <script>
+            window.addEventListener('resize', function(event) {
+                let width = window.innerWidth;
+                if(width < 1210){
+                    document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0 -35%";
+                    document.getElementsByClassName("header_tend")[0].style.margin ="-45% 0 0 -202%";
+
+                }else{
+                    document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0";
+                    document.getElementsByClassName("header_tend")[0].style.margin ="-45% 0 0";
+                }
+
+                if(width < 1440){
+                    document.getElementsByClassName("header_tend")[1].style.margin ="-45% 0 0 -202%";
+                }else{
+                    document.getElementsByClassName("header_tend")[1].style.margin ="-45% 0 0";
+                }
+            }, true);
+        </script>
     </div>
     <script>
 
     window.onscroll = function() {checkStickyFrontBar()};
 
     let frontBar = document.getElementById("drop-menu");
+    let tr_li = document.getElementsByClassName("transparent_wrapper")[0];
+    let tr_a = document.getElementsByClassName("transparent_wrapper")[0].getElementsByTagName("a")[0];
+    let tr_img = document.getElementsByClassName("transparent_wrapper")[0].getElementsByTagName("img")[0];
+
+    let div_sub = document.getElementsByClassName("transparent_wrapper")[1];
 
     let sticky = frontBar.offsetTop;
 
     function checkStickyFrontBar() {
         if (window.pageYOffset >= sticky) {
             frontBar.classList.add("sticky")
+            tr_li.style.display = "inline-block";
+            tr_a.style.display = "inline-block";
+            tr_img.style.display = "inline-block";
+            div_sub.style.display = "inline-block";
         } else {
             frontBar.classList.remove("sticky");
+            tr_li.style.display = "none";
+            tr_a.style.display = "none";
+            tr_img.style.display = "none";
+            div_sub.style.display = "none";
         }
     }
     </script>
