@@ -289,7 +289,6 @@ ul#header_menu ul a:hover {
     background-color: #000;
     margin:0;
     float:left;
-    max-width: 100px;
     width: 100%;
     font-size: 120%;
     padding: 0;
@@ -302,7 +301,6 @@ ul#header_menu ul a:hover {
     background-color: white;
     margin:0;
     padding:0;
-    max-width: 100px;
     width: 100%;
     font-size: 120%;
     display: block;
