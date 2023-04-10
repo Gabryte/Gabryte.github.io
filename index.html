@@ -1955,29 +1955,46 @@
                     </div>
                     <span class="songTimer">00:00/2:00</span>
                     <audio id="podcast3">
-                        <source src="audio/podcast3.mp3" type="audio/mp3">
+                        <source src="audio/podcast4.mp3" type="audio/mp3">
                     </audio>
                 </div>
-                <script>
-                    let audios = Array(3);
-                    audios = document.getElementsByTagName("audio");
-                    let progressBar = Array(3);
-                    progressBar = document.getElementsByClassName("songTracker");
-                    let inner = Array(3);
-                    inner = document.getElementsByClassName("songTimer");
-                    for (let i = 0; i < 3; i++) {
-                        audios[i].addEventListener("timeupdate", function(){
-                            let progress = (audios[i].currentTime / audios[i].duration) * 100;
-                            progressBar[i].style.width = progress + "%";
-                            let currentSeconds = (Math.floor(audios[i].currentTime % 60) < 10 ? '0' : '') + Math.floor(audios[i].currentTime % 60);
-                            let currentMinutes = Math.floor(audios[i].currentTime / 60);
-                            inner[i].innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
-                        });
-                    }
-                </script>
+                <div class="audio_wrapper">
+                    <img class="podcastPlay" onclick="playPause('podcast4',3)" src="img/play1.png" alt="Play Button">
+                    <img class="podcastPlay" onclick="stop('podcast4',3)" src="img/stop.png" alt="Stop Button">
+                    <div class="songSlider" onclick="setSongPosition(this,event,3)">
+                        <div class="songTracker"></div>
+                    </div>
+                    <span class="songTimer">00:00/1:13</span>
+                    <audio id="podcast4">
+                        <source src="audio/podcastZel.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="audio_wrapper">
+                    <img class="podcastPlay" onclick="playPause('podcast5',4)" src="img/play1.png" alt="Play Button">
+                    <img class="podcastPlay" onclick="stop('podcast5',4)" src="img/stop.png" alt="Stop Button">
+                    <div class="songSlider" onclick="setSongPosition(this,event,4)">
+                        <div class="songTracker"></div>
+                    </div>
+                    <span class="songTimer">00:00/0:50</span>
+                    <audio id="podcast5">
+                        <source src="audio/podcastTrump.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="audio_wrapper">
+                    <img class="podcastPlay" onclick="playPause('podcast6',5)" src="img/play1.png" alt="Play Button">
+                    <img class="podcastPlay" onclick="stop('podcast6',5)" src="img/stop.png" alt="Stop Button">
+                    <div class="songSlider" onclick="setSongPosition(this,event,5)">
+                        <div class="songTracker"></div>
+                    </div>
+                    <span class="songTimer">00:00/0:10</span>
+                    <audio id="podcast6">
+                        <source src="audio/bidenPodCast.mp3" type="audio/mp3">
+                    </audio>
+                </div>
             </section>
             <script>
-                let activeSong = new Array(3);
+                let audiosTot = 6;
+                let activeSong = new Array(audiosTot);
                 let play_button;
                 function playPause(id,index){
                     activeSong[index] = document.getElementById(id);
@@ -2012,6 +2029,29 @@
                     let percentage = (clickLocation/songSliderWidth);
                     //Sets the song location with the percentage.
                     setLocation(percentage,index);
+                }
+
+                let audios = Array(audiosTot);
+                audios = document.getElementsByTagName("audio");
+                let progressBar = Array(audiosTot);
+                progressBar = document.getElementsByClassName("songTracker");
+                let inner = Array(audiosTot);
+                inner = document.getElementsByClassName("songTimer");
+                for (let i = 0; i < audiosTot; i++) {
+                    audios[i].addEventListener("timeupdate", function() {
+                        let progress = (audios[i].currentTime / audios[i].duration) * 100;
+                        if (progress === 100) {
+                            progressBar[i].style.width = 0 + "%";
+                            inner[i].innerHTML = "00:00 / -:--";
+                            play_button.setAttribute("src", "img/play1.png")
+                            play_button.style.boxShadow = "black 0 0 45px 1px";
+                        } else {
+                            progressBar[i].style.width = progress + "%";
+                            let currentSeconds = (Math.floor(audios[i].currentTime % 60) < 10 ? '0' : '') + Math.floor(audios[i].currentTime % 60);
+                            let currentMinutes = Math.floor(audios[i].currentTime / 60);
+                            inner[i].innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+                        }
+                    });
                 }
             </script>
         </aside>
