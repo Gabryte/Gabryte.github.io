@@ -162,14 +162,12 @@ h1, h2, h3, h4, h5, h6 {
 .mail_img{
     max-width: 100%;
     height: auto;
-    background-color: white;
     order: 2;
 }
 li.transparent_wrapper .mail_img{
     max-width: 100%;
     min-width: 30px;
     height: auto;
-    background-color: white;
     display: none;
 }
 li.transparent_wrapper a{
@@ -274,7 +272,7 @@ ul#header_menu ul a:hover {
 }
 
 
-#nested_header_menu{
+#menu #nested_header_menu{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -287,52 +285,57 @@ ul#header_menu ul a:hover {
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
 
-#nested_header_menu .first {
+#menu #nested_header_menu .first {
     background-color: #000;
     margin:0;
-    padding:0;
     float:left;
+    max-width: 100px;
+    width: 100%;
     font-size: 120%;
+    padding: 0;
+    text-align: center;
     display: block;
     position: relative;
 }
-#nested_header_menu .second {
+#menu #nested_header_menu .second {
     float:left;
     background-color: white;
     margin:0;
     padding:0;
+    max-width: 100px;
+    width: 100%;
     font-size: 120%;
     display: block;
     position: relative;
 }
-#nested_header_menu .first a {
+#menu #nested_header_menu .first a {
     float: left;
     color: white;
     text-transform: none;
     text-decoration:none;
 }
-#nested_header_menu .second a {
+#menu #nested_header_menu .second a {
     float: left;
     color: gray;
     text-transform: none;
     text-decoration:none;
 }
 
-#nested_header_menu .first a:hover {
+#menu #nested_header_menu .first a:hover {
     text-decoration: underline;
 }
-#nested_header_menu li:hover ol {
+#menu #nested_header_menu li:hover ol {
     opacity: 1;
     visibility: visible;
 }
-#nested_header_menu ol li {
+#menu #nested_header_menu ol li {
     float: none;
     display: block;
     color: white;
     border: 0;
 }
 
-#nested_header_menu ol a {
+#menu #nested_header_menu ol a {
     padding:10px;
     width: 130px;
     display: block;
@@ -343,7 +346,7 @@ ul#header_menu ul a:hover {
     color: white;
     text-align: right;
 }
-#nested_header_menu ol a:hover {
+#menu #nested_header_menu ol a:hover {
     background-color: darkred;
     transition: background-color 0.5s;
     color: white;
@@ -368,7 +371,6 @@ ul#header_menu ul a:hover {
 .header_tend_for_bar{
     margin:-45% 0 0;
     padding:0;
-    width: 175%;
     display:inline-block;
     list-style: none;
     opacity: 0;
@@ -429,12 +431,11 @@ ul#menu li a {
     text-transform: none;
     text-decoration:none;
 }
-
-ul#menu li a:hover {
-    background: white;
-    color: #000;
+/*
+ul#menu >li a:hover {
 }
-ul#menu li:hover ul {
+*/
+ul#menu >li:hover ul {
     opacity: 1;
     visibility: visible;
 }
@@ -492,6 +493,7 @@ ul#menu ul a:hover {
     background: white;
     box-shadow: #000 0 0 10px;
 }
+
 .under_bar{
     display: flex;
     background-color: white;
