@@ -1576,7 +1576,7 @@ section#middle_column .front_article .main_article_title a:hover{
     margin-left:3px;
     color: white;
     background: #a9091f;
-    border: none;
+    border: 1px transparent solid;
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 10px;
@@ -1590,10 +1590,9 @@ section#middle_column .front_article .main_article_title a:hover{
 .email_button:focus{
     box-shadow: #000 0 0 4px;
 }
-
-
-
-
+.vote_wrapper .email_button {
+    padding:2%;
+}
 .label_wrapper{
     display: flex;
     flex-direction: row;
@@ -1835,7 +1834,7 @@ section#middle_column .front_article .main_article_title a:hover{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 70%;
     color: #428bca;
-    margin-top: 1%;
+    margin-top: 4%;
 }
 .vote_wrapper .under_page:hover{
     text-decoration: underline;
@@ -1849,13 +1848,14 @@ section#middle_column .front_article .main_article_title a:hover{
     scroll-behavior: smooth;
     border: 2px solid #000;
     border-radius: 5px;
+    padding:2%;
 }
 .scroller h5{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 80%;
     color: #000;
-    margin-left: 5%;
-    margin-top: 1px;
-    margin-bottom: 0;
     text-align: left;
+    padding-bottom: 1%;
+    margin: 1px 5% 0;
+    border-bottom: 1px solid #ccc;
 }

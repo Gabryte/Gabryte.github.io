@@ -1933,7 +1933,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,0)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/2:00</span>
+                        <span class="songTimer">0:00/2:00</span>
                         <audio id="podcast0">
                             <source src="audio/podcast.mp3" type="audio/mp3">
                         </audio>
@@ -1946,7 +1946,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,1)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/2:00</span>
+                        <span class="songTimer">0:00/2:00</span>
                         <audio id="podcast1">
                             <source src="audio/podcast3.mp3" type="audio/mp3">
                         </audio>
@@ -1959,7 +1959,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,2)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/2:00</span>
+                        <span class="songTimer">0:00/2:00</span>
                         <audio id="podcast2">
                             <source src="audio/podcast4.mp3" type="audio/mp3">
                         </audio>
@@ -1972,7 +1972,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,3)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/1:13</span>
+                        <span class="songTimer">0:00/1:13</span>
                         <audio id="podcast3">
                             <source src="audio/podcastZel.mp3" type="audio/mp3">
                         </audio>
@@ -1985,7 +1985,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,4)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/0:50</span>
+                        <span class="songTimer">0:00/0:50</span>
                         <audio id="podcast4">
                             <source src="audio/podcastTrump.mp3" type="audio/mp3">
                         </audio>
@@ -1998,7 +1998,7 @@
                         <div class="songSlider" onclick="setSongPosition(this,event,5)">
                             <div class="songTracker"></div>
                         </div>
-                        <span class="songTimer">00:00/0:10</span>
+                        <span class="songTimer">0:00/0:10</span>
                         <audio id="podcast5">
                             <source src="audio/bidenPodCast.mp3" type="audio/mp3">
                         </audio>
@@ -2065,14 +2065,14 @@
                         let progress = (audios[i].currentTime / audios[i].duration) * 100;
                         if (progress === 100) {
                             progressBar[i].style.width = 0 + "%";
-                            inner[i].innerHTML = "00:00 / -:--";
+                            inner[i].innerHTML = "00:00/-:--";
                             play_button.setAttribute("src", "img/play1.png")
                             play_button.style.boxShadow = "black 0 0 45px 1px";
                         } else {
                             progressBar[i].style.width = progress + "%";
                             let currentSeconds = (Math.floor(audios[i].currentTime % 60) < 10 ? '0' : '') + Math.floor(audios[i].currentTime % 60);
                             let currentMinutes = Math.floor(audios[i].currentTime / 60);
-                            inner[i].innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+                            inner[i].innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
                         }
                     });
                 }
