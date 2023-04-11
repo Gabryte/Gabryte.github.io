@@ -187,6 +187,9 @@
                         document.getElementsByClassName("menu-icon")[0].style.display = "flex";
                     }else {
                         document.getElementsByClassName("menu-icon")[0].style.display = "none";
+                        document.getElementById("overlay").classList.remove("active");
+                        document.getElementById("menuContainer").classList.remove("active");
+                        document.getElementsByClassName("menu-icon")[0].classList.remove("active");
                     }
                 }, true);
             </script>
@@ -202,13 +205,13 @@
             let menuOptions = document.querySelectorAll(".menuOptions");
 
             menuButton.addEventListener("click", toggleMenu);
-            overlay.addEventListener("click", toggleMenu);
 
             function toggleMenu() {
-                menuButton.classList.toggle("active");
-                overlay.classList.toggle("active");
-                menuContainer.classList.toggle("active");
+                    menuButton.classList.toggle("active");
+                    overlay.classList.toggle("active");
+                    menuContainer.classList.toggle("active");
             }
+
 
             menuTitles.forEach((title) => {
                 let options = title.nextElementSibling;

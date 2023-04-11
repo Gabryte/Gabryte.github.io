@@ -1865,7 +1865,7 @@ section#middle_column .front_article .main_article_title a:hover{
 
 .menu-icon{
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
     display: none;
     flex-direction: column;
     row-gap: 5px;
@@ -1878,6 +1878,7 @@ section#middle_column .front_article .main_article_title a:hover{
     min-width: 30px;
     min-height: 20px;
     order:9;
+    z-index: 6;
 
 }
 .line_segment {
@@ -1887,6 +1888,12 @@ section#middle_column .front_article .main_article_title a:hover{
     border: 1px solid #000;
     border-radius: 20px;
     transition: transform 0.3s;
+}
+
+.menu-icon.active {
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 .menu-icon.active .line_segment:nth-child(1){
     transform: translateY(8px) rotate(45deg);
@@ -1900,7 +1907,7 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 
 #overlay {
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.85);
     height: 100%;
     left: 0;
     position: fixed;
