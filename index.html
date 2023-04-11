@@ -48,7 +48,7 @@
             <script>
                 window.addEventListener('resize', function(event) {
                     let width = window.innerWidth;
-                    if(width <= 800){
+                    if(width <= 910){
                         document.getElementsByClassName("menu-icon")[0].style.display = "flex";
                     }else {
                         document.getElementsByClassName("menu-icon")[0].style.display = "none";
@@ -65,6 +65,7 @@
             let overlay = document.getElementById("overlay");
             let menuContainer = document.getElementById("menuContainer");
             let menuTitles = document.querySelectorAll(".menuTitle");
+            let menuOptions = document.querySelectorAll(".menuOptions");
 
             menuButton.addEventListener("click", toggleMenu);
             overlay.addEventListener("click", toggleMenu);
@@ -86,6 +87,16 @@
                     options.style.display = "none";
                 });
             });
+            menuOptions.forEach((options) => {
+                options.addEventListener("mouseover", () => {
+                    options.style.display = "block";
+                });
+
+                options.addEventListener("mouseout", () => {
+                    options.style.display = "none";
+                });
+            });
+
         </script>
 
         <figure>
@@ -222,17 +233,19 @@
     <script>
 
     window.onscroll = function() {checkStickyFrontBar()};
-
     let disappearedMail = false;
     let disappearedButtons = false;
     let frontBar = document.getElementById("drop-menu");
+    let sticky;
+        sticky = frontBar.offsetTop + 10;
     let tr_li = document.getElementsByClassName("transparent_wrapper")[0];
     let tr_a = document.getElementsByClassName("transparent_wrapper")[0].getElementsByTagName("a")[0];
     let tr_img = document.getElementsByClassName("transparent_wrapper")[0].getElementsByTagName("img")[0];
 
     let div_sub = document.getElementsByClassName("transparent_wrapper")[1];
 
-    let sticky = frontBar.offsetTop;
+
+
 
     function checkStickyFrontBar() {
         if (window.pageYOffset >= sticky) {
@@ -262,25 +275,26 @@
             }else{
                 document.getElementsByClassName("header_tend_for_bar")[0].style.margin ="-45% 0 0";
             }
-            if(width < 1400){
-                document.getElementsByClassName("transparent_wrapper")[1].style.display="none";
-                disappearedButtons = true;
-            }else{
-                if(window.pageYOffset >= sticky) {
-                    document.getElementsByClassName("transparent_wrapper")[1].style.display = "inline-block";
-                    disappearedButtons = false;
+                if (width < 1400) {
+                    document.getElementsByClassName("transparent_wrapper")[1].style.display = "none";
+                    disappearedButtons = true;
+                } else {
+                    disappearedButtons = true;
+                    if (window.pageYOffset >= sticky) {
+                        document.getElementsByClassName("transparent_wrapper")[1].style.display = "inline-block";
+                        disappearedButtons = false;
+                    }
                 }
-            }
-            if(width < 1120){
-                disappearedMail = true;
-                document.getElementsByClassName("transparent_wrapper")[0].style.display="none";
-            }else{
-                if(window.pageYOffset >= sticky) {
-                    disappearedMail = false;
-                    document.getElementsByClassName("transparent_wrapper")[0].style.display = "inline-block";
+                if (width < 1120) {
+                    disappearedMail = true;
+                    document.getElementsByClassName("transparent_wrapper")[0].style.display = "none";
+                } else {
+                    disappearedMail = true;
+                    if (window.pageYOffset >= sticky) {
+                        disappearedMail = false;
+                        document.getElementsByClassName("transparent_wrapper")[0].style.display = "inline-block";
+                    }
                 }
-            }
-
         } else {
             frontBar.classList.remove("sticky");
             tr_li.style.display = "none";
@@ -291,40 +305,43 @@
     }
 
     window.addEventListener('resize', function(event) {
-        let width = window.innerWidth;
-        if(width < 1210){
-            document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0 -35%";
-            document.getElementsByClassName("header_tend")[0].style.margin ="-45% 0 0 -202%";
 
-        }else{
-            document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0";
-            document.getElementsByClassName("header_tend")[0].style.margin ="-45% 0 0";
-        }
+            let width = window.innerWidth;
+            if (width < 1210) {
+                document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0 -35%";
+                document.getElementsByClassName("header_tend")[0].style.margin = "-45% 0 0 -202%";
 
-        if(width < 1581){
-            document.getElementsByClassName("header_tend_for_bar")[0].style.margin ="-45% 0 0 -34%";
-        }else{
-            document.getElementsByClassName("header_tend_for_bar")[0].style.margin ="-45% 0 0";
-        }
-        if(width < 1400){
-            document.getElementsByClassName("transparent_wrapper")[1].style.display="none";
-            disappearedButtons = true;
-        }else{
-            if(window.pageYOffset >= sticky) {
-                document.getElementsByClassName("transparent_wrapper")[1].style.display = "inline-block";
-                disappearedButtons = false;
+            } else {
+                document.getElementsByClassName("last_tend")[0].style.margin = "5px 0 0";
+                document.getElementsByClassName("header_tend")[0].style.margin = "-45% 0 0";
             }
-        }
-        if(width < 1120){
-            disappearedMail = true;
-            document.getElementsByClassName("transparent_wrapper")[0].style.display="none";
-        }else{
-            if(window.pageYOffset >= sticky) {
-                disappearedMail = false;
-                document.getElementsByClassName("transparent_wrapper")[0].style.display = "inline-block";
+
+            if (width < 1581) {
+                document.getElementsByClassName("header_tend_for_bar")[0].style.margin = "-45% 0 0 -34%";
+            } else {
+                document.getElementsByClassName("header_tend_for_bar")[0].style.margin = "-45% 0 0";
             }
-        }
-    }, true);
+
+                if (width < 1400) {
+                    document.getElementsByClassName("transparent_wrapper")[1].style.display = "none";
+                    disappearedButtons = true;
+                } else {
+                    disappearedButtons = true;
+                    if (window.pageYOffset >= sticky) {
+                        document.getElementsByClassName("transparent_wrapper")[1].style.display = "inline-block";
+                        disappearedButtons = false;
+                    }
+                }
+                if (width < 1120) {
+                    disappearedMail = true;
+                    document.getElementsByClassName("transparent_wrapper")[0].style.display = "none";
+                } else {
+                    if (window.pageYOffset >= sticky) {
+                        disappearedMail = false;
+                        document.getElementsByClassName("transparent_wrapper")[0].style.display = "inline-block";
+                    }
+                }
+    },true);
     </script>
     <br class="space"/>
     <br class="space"/>
