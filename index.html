@@ -19,6 +19,31 @@
 <body>
     <div id="header">
 
+        <div class="menu-icon">
+            <span class="line_segment"></span>
+            <span class="line_segment"></span>
+            <span class="line_segment"></span>
+        </div>
+        <script>
+            // get the menu button element
+            var menuButton = document.getElementsByClassName("menu-icon")[0];
+
+            // toggle the active class on the menu button when clicked
+            menuButton.addEventListener("click", function() {
+                menuButton.classList.toggle("active");
+            });
+
+
+            window.addEventListener('resize', function(event) {
+                let width = window.innerWidth;
+                if(width <= 800){
+                    document.getElementsByClassName("menu-icon")[0].style.display = "flex";
+                }else {
+                    document.getElementsByClassName("menu-icon")[0].style.display = "none";
+                }
+            }, true);
+        </script>
+
         <figure>
         <img id="title_img" src="img/titleImg.gif" title="The Washington Post" alt="The Washington Post">
             <figcaption id="title_caption"><i>America's Newspaper</i></figcaption>
@@ -43,25 +68,8 @@
             </ul>
         </div>
 
-        <script>
-            /*
-            window.onresize = function(){checkForResize()}
-
-            let second_tend = document.getElementsByClassName("header_tend");
-
-            let x_pos = second_tend.getBoundingClientRect().left + 100;
-            function checkForResize() {
-                if (window.innerWidth <= x_pos) {
-                    second_tend.classList.remove("header_tend");
-                    second_tend.classList.add("header_tend_after_compression")
-                } else {
-                    second_tend.classList.remove("header_tend_after_compression");
-                }
-            }
-            */
-        </script>
-
     </div>
+
     <div id="drop-menu">
         <ul id="menu">
             <li><a href="#"><strong>News▽</strong></a>
