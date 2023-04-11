@@ -15,7 +15,6 @@
         min-width: 50px;
         border: none;
         flex-direction: column;
-        flex-grow: 100;
 
     }
     #main_content #middle_column{ /*for the middle column*/
@@ -25,13 +24,11 @@
         max-width: 500px;
         min-width: 50px;
         flex-direction: column;
-        flex-grow: 100;
     }
     #main_content #third_column{/*third column*/
         order: 3;
         flex-direction: column;
         flex-basis: 100%;
-        flex-grow: 100;
         max-width: 425px;
         min-width: 50px;
         border: none;
@@ -217,7 +214,7 @@ ul#header_menu{
     flex-direction: row;
     flex-wrap: nowrap;
     float: left;
-    margin:15% 0 0;
+    margin: 15% 0 15%;
     padding: 0;
     border: 2px solid #000;
     border-radius: 5px;
@@ -1883,9 +1880,7 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-direction: column;
     row-gap: 5px;
     align-self: flex-start;
-    margin-top: 25px;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin: 25px 15px 5px;
     height: 20px;
     width: 30px;
     min-width: 30px;

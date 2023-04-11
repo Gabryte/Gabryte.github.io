@@ -207,6 +207,19 @@
                     }else {
                         document.getElementById("title_caption").style.display = "flex";
                     }
+
+                    if(width <= 400){
+                        document.getElementById("front_header_title").style.display = "none";
+                    }else {
+                        document.getElementById("front_header_title").style.display = "flex";
+                    }
+
+                    if(width <= 200){
+                        document.getElementById("header_drop_down").style.display = "none";
+                    }else {
+                        document.getElementById("header_drop_down").style.display = "flex";
+                    }
+
                 }, true);
             </script>
         </div>
