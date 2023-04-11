@@ -493,6 +493,23 @@ ul#menu ul a:hover {
     background: white;
     box-shadow: #000 0 0 10px;
 }
+
+.tend_restricted{
+    margin:5px 0 0;
+    width: 100%;
+    padding:0;
+    display:inline-block;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index:9999;
+    background: white;
+    box-shadow: #000 0 0 10px;
+}
+
 .last_tend{
     margin:5px 0 0;
     padding:0;
