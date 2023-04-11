@@ -185,11 +185,27 @@
                     let width = window.innerWidth;
                     if(width <= 910){
                         document.getElementsByClassName("menu-icon")[0].style.display = "flex";
+                        document.getElementById("title_caption").style.alignSelf = "flex-start";
+                        document.getElementById("title_caption").style.marginRight = "0";
                     }else {
                         document.getElementsByClassName("menu-icon")[0].style.display = "none";
                         document.getElementById("overlay").classList.remove("active");
                         document.getElementById("menuContainer").classList.remove("active");
                         document.getElementsByClassName("menu-icon")[0].classList.remove("active");
+                        document.getElementById("title_caption").style.alignSelf = "center";
+                        document.getElementById("title_caption").style.marginRight = "10%";
+
+                    }
+                    if(width <= 794){
+                        document.getElementById("mail_header_box").style.display = "none";
+                    }else {
+                        document.getElementById("mail_header_box").style.display = "flex";
+                    }
+
+                    if(width <= 630){
+                        document.getElementById("title_caption").style.display = "none";
+                    }else {
+                        document.getElementById("title_caption").style.display = "flex";
                     }
                 }, true);
             </script>
@@ -236,12 +252,12 @@
 
         </script>
 
-        <figure>
+        <figure id="front_header_title">
         <img id="title_img" src="img/titleImg.gif" title="The Washington Post" alt="The Washington Post">
             <figcaption id="title_caption"><i>America's Newspaper</i></figcaption>
         </figure>
 
-        <figure>
+        <figure id="mail_header_box">
             <a href="#" title="NewsLetter" ><img alt="mailToUs" class="mail_img" src="img/mail.png"></a>
         </figure>
         <div id="header_drop_down">

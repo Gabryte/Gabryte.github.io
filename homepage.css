@@ -155,11 +155,24 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     height:auto;
     order:1;
+    margin-right: 0;
+    padding-right: 0;
 }
+#front_header_title{
+    margin-right: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    order: 0;
+}
+
 #title_caption{
+    order:1;
+    margin-right: 10%;
     width: 50%;
     max-width: 50%;
     height: auto;
+    align-self: center;
     font-size: smaller;
     text-align: center;
     font-family: Signika,Helmet,Freesans,sans-serif;
