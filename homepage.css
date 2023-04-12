@@ -412,6 +412,16 @@ ul#header_menu ul a:hover {
     width: 100%;
 }
 
+.sticky_podcast{
+    position: fixed;
+    top: 35px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+
+
 ul#menu {
     display: flex;
     flex-direction: row;
@@ -492,6 +502,7 @@ ul#menu ul a:hover {
     z-index:9999;
     background: white;
     box-shadow: #000 0 0 10px;
+    border-radius: 10px;
 }
 
 .tend_restricted{
@@ -508,6 +519,7 @@ ul#menu ul a:hover {
     z-index:9999;
     background: white;
     box-shadow: #000 0 0 10px;
+    border-radius: 10px;
 }
 
 .last_tend{
@@ -523,6 +535,7 @@ ul#menu ul a:hover {
     z-index:9999;
     background: white;
     box-shadow: #000 0 0 10px;
+    border-radius: 10px;
 }
 
 .under_bar{
@@ -1267,6 +1280,14 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-wrap: nowrap;
     align-items: stretch;
 }
+
+#overPodcast{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
 #podcast_sticky{
     display: flex;
     flex-direction: column;

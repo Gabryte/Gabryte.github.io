@@ -2212,7 +2212,7 @@
                     </p>
                 </div>
             </section>
-            <section class="section_vertical">
+            <section id="overPodcast">
                 <h3 class="right_side_comment_header_rapid">
                     <a href="#" title="See out our today's paper">Today's paper</a>
                 </h3>
@@ -2324,6 +2324,24 @@
                         </audio>
                     </div>
                 </div>
+                <script>
+                    //TODO Conclude the sticky podcast section
+                    let UpperElementOverPodcastSectionBar = document.getElementById("overPodcast")
+                    let podcastSectionBar = document.getElementById("podcast_sticky");
+
+
+                    window.addEventListener("scroll", function () {
+                        let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
+
+                        if(window.pageYOffset >= originalCoordinates){
+                            podcastSectionBar.classList.add("sticky_podcast");
+                        }else{
+                            podcastSectionBar.classList.remove("sticky_podcast");
+                        }
+
+                    });
+
+                </script>
             </section>
             <script>
                 let audiosTot = 6;
