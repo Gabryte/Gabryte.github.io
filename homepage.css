@@ -412,16 +412,6 @@ ul#header_menu ul a:hover {
     width: 100%;
 }
 
-.sticky_podcast{
-    position: fixed;
-    top: 35px;
-    width: 100%;
-    max-width: 400px;
-    min-width: 200px;
-}
-
-
-
 ul#menu {
     display: flex;
     flex-direction: row;
@@ -1294,6 +1284,14 @@ section#middle_column .front_article .main_article_title a:hover{
     flex-wrap: nowrap;
     align-items: stretch;
 }
+
+
+.sticky_podcast{
+    position: fixed;
+    top: 35px;
+
+}
+
 .ex_comment{
     font-weight: 700;
     font-size: 100%;

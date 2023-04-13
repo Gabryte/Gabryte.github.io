@@ -2328,19 +2328,37 @@
                     //TODO Conclude the sticky podcast section
                     let UpperElementOverPodcastSectionBar = document.getElementById("overPodcast")
                     let podcastSectionBar = document.getElementById("podcast_sticky");
+                    let footerBlock = document.getElementById("footer_content");
 
 
                     window.addEventListener("scroll", function () {
                         let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
-
                         if(window.pageYOffset >= originalCoordinates){
-                            podcastSectionBar.classList.add("sticky_podcast");
+                                podcastSectionBar.classList.add("sticky_podcast");
+                                podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
                         }else{
                             podcastSectionBar.classList.remove("sticky_podcast");
+                            podcastSectionBar.style.removeProperty("width");
                         }
 
-                    });
 
+                    });
+                    window.addEventListener("resize", function () {
+                        let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
+
+                        if(window.pageYOffset >= originalCoordinates){
+
+                                podcastSectionBar.classList.add("sticky_podcast");
+                                podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
+
+                        }else{
+                            podcastSectionBar.classList.remove("sticky_podcast");
+                            podcastSectionBar.style.removeProperty("width");
+                        }
+
+
+
+                    });
                 </script>
             </section>
             <script>
