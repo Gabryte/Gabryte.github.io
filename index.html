@@ -2241,6 +2241,7 @@
                     </p>
                 </div>
             </section>
+            <div id="grow"></div>
             <section id="podcast_sticky">
                 <h3 class="right_side_comment_header_rapid">
                     <a href="#" title="Listen to our podcasts!">Front page podcast</a>
@@ -2324,42 +2325,6 @@
                         </audio>
                     </div>
                 </div>
-                <script>
-                    //TODO Conclude the sticky podcast section
-                    let UpperElementOverPodcastSectionBar = document.getElementById("overPodcast")
-                    let podcastSectionBar = document.getElementById("podcast_sticky");
-                    let footerBlock = document.getElementById("footer_content");
-
-
-                    window.addEventListener("scroll", function () {
-                        let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
-                        if(window.pageYOffset >= originalCoordinates){
-                                podcastSectionBar.classList.add("sticky_podcast");
-                                podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
-                        }else{
-                            podcastSectionBar.classList.remove("sticky_podcast");
-                            podcastSectionBar.style.removeProperty("width");
-                        }
-
-
-                    });
-                    window.addEventListener("resize", function () {
-                        let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
-
-                        if(window.pageYOffset >= originalCoordinates){
-
-                                podcastSectionBar.classList.add("sticky_podcast");
-                                podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
-
-                        }else{
-                            podcastSectionBar.classList.remove("sticky_podcast");
-                            podcastSectionBar.style.removeProperty("width");
-                        }
-
-
-
-                    });
-                </script>
             </section>
             <script>
                 let audiosTot = 6;
@@ -3135,4 +3100,76 @@
         </div>
     </footer>
 </body>
+<script>
+    //TODO Conclude the sticky podcast section
+    let UpperElementOverPodcastSectionBar = document.getElementById("overPodcast")
+    let podcastSectionBar = document.getElementById("podcast_sticky");
+    let footerBlock = document.getElementById("footer_content");
+
+
+    window.addEventListener("scroll", function () {
+        let width = window.innerWidth;
+        let spacer = document.getElementById("grow");
+        if(width > 1046) {
+            let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
+
+            if (window.pageYOffset >= originalCoordinates) {
+
+                if (window.pageYOffset + podcastSectionBar.offsetHeight + 35 <= footerBlock.offsetTop) {
+                    spacer.style.removeProperty("padding-top");
+                    podcastSectionBar.classList.add("sticky_podcast");
+                    podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
+                } else {
+                    podcastSectionBar.style.removeProperty("width");
+                    podcastSectionBar.classList.remove("sticky_podcast");
+                    spacer.style.paddingTop = footerBlock.offsetTop - UpperElementOverPodcastSectionBar.offsetTop - UpperElementOverPodcastSectionBar.offsetHeight -podcastSectionBar.offsetHeight - 35 + "px";
+
+                }
+
+            } else {
+                spacer.style.removeProperty("padding-top");
+                podcastSectionBar.classList.remove("sticky_podcast");
+                podcastSectionBar.style.removeProperty("width");
+            }
+
+        }else{
+            spacer.style.removeProperty("padding-top");
+            podcastSectionBar.classList.remove("sticky_podcast");
+            podcastSectionBar.style.removeProperty("width");
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        let width = window.innerWidth;
+        let spacer = document.getElementById("grow");
+        if(width > 1046) {
+            let originalCoordinates = UpperElementOverPodcastSectionBar.offsetTop + UpperElementOverPodcastSectionBar.offsetHeight;
+
+
+            if (window.pageYOffset >= originalCoordinates) {
+
+                if (window.pageYOffset + podcastSectionBar.offsetHeight + 35 <= footerBlock.offsetTop) {
+                    spacer.style.removeProperty("padding-top");
+                    podcastSectionBar.classList.add("sticky_podcast");
+                    podcastSectionBar.style.width = UpperElementOverPodcastSectionBar.offsetWidth + "px";
+                } else {
+                    podcastSectionBar.style.removeProperty("width");
+                    podcastSectionBar.classList.remove("sticky_podcast");
+                    spacer.style.paddingTop = footerBlock.offsetTop - UpperElementOverPodcastSectionBar.offsetTop - UpperElementOverPodcastSectionBar.offsetHeight -podcastSectionBar.offsetHeight - 35 + "px";
+
+                }
+
+            } else {
+                spacer.style.removeProperty("padding-top");
+                podcastSectionBar.classList.remove("sticky_podcast");
+                podcastSectionBar.style.removeProperty("width");
+            }
+
+        }else{
+            spacer.style.removeProperty("padding-top");
+            podcastSectionBar.classList.remove("sticky_podcast");
+            podcastSectionBar.style.removeProperty("width");
+        }
+    });
+</script>
 </html>
