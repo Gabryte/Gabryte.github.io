@@ -40,9 +40,26 @@ function playPause(id,index){
     }
 }
 function stop(id,index){
+
+    //searching the current active song before stopping it.
+    let index_current_active_song = -1;
+    for (let j = 0; j < activeSong.length; j++) {
+        if(!activeSong[j].paused){
+            index_current_active_song = j;
+            break;
+        }
+    }
+    if(index_current_active_song === index){ //mirroring the header only if the active song is stopped.
+        //mirroring the progress bar in the header
+        progressHeaderBar.style.width = "0" + "%";
+        //mirroring the inner timing in the header
+        innerTimingHeader.innerHTML = "0" + ":" + "00" + '/' + Math.floor(activeSong[index_current_active_song].duration / 60) + ":" + (Math.floor(activeSong[index_current_active_song].duration % 60) < 10 ? '0' : '') + Math.floor(activeSong[index_current_active_song].duration % 60);
+    }
+
     if(!activeSong[index].paused) {
         playPause(id,index);
     }
+
     activeSong[index].currentTime = 0;
     activeSong[index].pause();
 }
@@ -72,28 +89,46 @@ inner = document.getElementsByClassName("songTimer");
 for (let i = 0; i < audiosTot; i++) {
     audios[i].addEventListener("timeupdate", function() {
         let progress = (audios[i].currentTime / audios[i].duration) * 100;
+
+        //searching the current active song.
+        let index_current_active_song = -1;
+        for (let j = 0; j < activeSong.length; j++) {
+            if(!activeSong[j].paused){
+                index_current_active_song = j;
+                break;
+            }
+        }
+
         if (progress === 100) {
             progressBar[i].style.width = 0 + "%";
-            //mirroring the progress bar in the header
-            progressHeaderBar.style.width = 0 + "%";
             inner[i].innerHTML = "00:00/-:--";
-            //mirroring the inner timing in the header
-            innerTimingHeader.innerHTML = "00:00/-:--";
             play_button.setAttribute("src", "img/play1.png")
-            //mirroring the play button in the header
-            headerPlayButton.setAttribute("src", "img/play50X50.png");
             play_button.style.boxShadow = "black 0 0 45px 1px";
-            //mirroring the play button in the header
-            headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+
+            if(index_current_active_song === i) { //only if the active song is changed the header mirrors it.
+                //mirroring the progress bar in the header
+                progressHeaderBar.style.width = 0 + "%";
+                //mirroring the inner timing in the header
+                innerTimingHeader.innerHTML = "00:00/-:--";
+                //mirroring the play button in the header
+                headerPlayButton.setAttribute("src", "img/play50X50.png");
+                //mirroring the play button in the header
+                headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+            }
+
         } else {
             progressBar[i].style.width = progress + "%";
-            //mirroring the progress bar in the header
-            progressHeaderBar.style.width = progress + "%";
+
             let currentSeconds = (Math.floor(audios[i].currentTime % 60) < 10 ? '0' : '') + Math.floor(audios[i].currentTime % 60);
             let currentMinutes = Math.floor(audios[i].currentTime / 60);
             inner[i].innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
-            //mirroring the inner timing in the header
-            innerTimingHeader.innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+
+            if(index_current_active_song === i) {
+                //mirroring the progress bar in the header
+                progressHeaderBar.style.width = progress + "%";
+                //mirroring the inner timing in the header
+                innerTimingHeader.innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+            }
         }
     });
 }
