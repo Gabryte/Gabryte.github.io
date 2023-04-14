@@ -80,6 +80,27 @@ function setSongPosition(obj,e,index){
     setLocation(percentage,index);
 }
 
+let previousSongPaused = -1;
+
+function checkForActiveSong(){
+    //searching the current active song before stopping it.
+    let index_current_active_song = -1;
+    for (let j = 0; j < activeSong.length; j++) {
+        if(!activeSong[j].paused){
+            index_current_active_song = j;
+            break;
+        }
+    }
+
+    if(index_current_active_song !== -1){
+        playPause("podcast" + index_current_active_song,index_current_active_song,index_current_active_song);
+        previousSongPaused = index_current_active_song;
+    }else if(index_current_active_song === -1 && previousSongPaused !== -1){
+        playPause("podcast" + previousSongPaused,previousSongPaused,previousSongPaused);
+    }
+
+}
+
 let audios = Array(audiosTot);
 audios = document.getElementsByTagName("audio");
 let progressBar = Array(audiosTot);
