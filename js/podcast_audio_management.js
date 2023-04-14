@@ -4,7 +4,7 @@ let headerPlayButton = document.getElementsByClassName("podcastHeaderPlay")[0];
 let progressHeaderBar = document.getElementsByClassName("songTracker_pod")[0];
 let innerTimingHeader = document.getElementsByClassName("songTimer_pod")[0];
 let headerSlider = document.getElementsByClassName("songSlider_pod")[0];
-
+let previousSongPaused = -1;
 let activeSong = new Array(audiosTot);
 for (let i = 0; i < audiosTot; i++) {
     activeSong[i] = document.getElementById("podcast" + i);
@@ -54,7 +54,14 @@ function stop(id,index){
         progressHeaderBar.style.width = "0" + "%";
         //mirroring the inner timing in the header
         innerTimingHeader.innerHTML = "0" + ":" + "00" + '/' + Math.floor(activeSong[index_current_active_song].duration / 60) + ":" + (Math.floor(activeSong[index_current_active_song].duration % 60) < 10 ? '0' : '') + Math.floor(activeSong[index_current_active_song].duration % 60);
+    }else if(previousSongPaused !== -1){
+        //mirroring the progress bar in the header
+        progressHeaderBar.style.width = "0" + "%";
+        //mirroring the inner timing in the header
+        innerTimingHeader.innerHTML = "0" + ":" + "00" + '/' + Math.floor(activeSong[previousSongPaused].duration / 60) + ":" + (Math.floor(activeSong[previousSongPaused].duration % 60) < 10 ? '0' : '') + Math.floor(activeSong[previousSongPaused].duration % 60);
     }
+
+
 
     if(!activeSong[index].paused) {
         playPause(id,index);
@@ -80,7 +87,7 @@ function setSongPosition(obj,e,index){
     setLocation(percentage,index);
 }
 
-let previousSongPaused = -1;
+
 
 function checkForActiveSong(){
     //searching the current active song before stopping it.
@@ -91,7 +98,6 @@ function checkForActiveSong(){
             break;
         }
     }
-
     if(index_current_active_song !== -1){
         playPause("podcast" + index_current_active_song,index_current_active_song,index_current_active_song);
         previousSongPaused = index_current_active_song;
