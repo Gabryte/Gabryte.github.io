@@ -88,6 +88,38 @@ function setSongPosition(obj,e,index){
 }
 
 
+function setSongPositionHeader(obj,e){
+    //searching the current active song before stopping it.
+    let index_current_active_song = -1;
+    for (let j = 0; j < activeSong.length; j++) {
+        if(!activeSong[j].paused){
+            index_current_active_song = j;
+            break;
+        }
+    }
+    if(index_current_active_song !== -1){
+
+        let songSliderWidth = obj.offsetWidth;
+        let evtobj=window.event? event : e;
+        clickLocation = evtobj.layerX - obj.offsetLeft;
+        //Gets the percentage of the click location.
+        let percentage = (clickLocation/songSliderWidth);
+
+        setLocation(percentage,index_current_active_song);
+
+    }else if(previousSongPaused !== -1){
+
+        let songSliderWidth = obj.offsetWidth;
+        let evtobj=window.event? event : e;
+        clickLocation = evtobj.layerX - obj.offsetLeft;
+        //Gets the percentage of the click location.
+        let percentage = (clickLocation/songSliderWidth);
+
+        setLocation(percentage,previousSongPaused);
+    }
+
+}
+
 
 function checkForActiveSong(){
     //searching the current active song before stopping it.
@@ -144,6 +176,15 @@ for (let i = 0; i < audiosTot; i++) {
                 headerPlayButton.setAttribute("src", "img/play50X50.png");
                 //mirroring the play button in the header
                 headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+            }else if(previousSongPaused === i){
+                //mirroring the progress bar in the header
+                progressHeaderBar.style.width = 0 + "%";
+                //mirroring the inner timing in the header
+                innerTimingHeader.innerHTML = "00:00/-:--";
+                //mirroring the play button in the header
+                headerPlayButton.setAttribute("src", "img/play50X50.png");
+                //mirroring the play button in the header
+                headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
             }
 
         } else {
@@ -154,6 +195,11 @@ for (let i = 0; i < audiosTot; i++) {
             inner[i].innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
 
             if(index_current_active_song === i) {
+                //mirroring the progress bar in the header
+                progressHeaderBar.style.width = progress + "%";
+                //mirroring the inner timing in the header
+                innerTimingHeader.innerHTML = currentMinutes + ":" + currentSeconds + '/' + Math.floor(audios[i].duration / 60) + ":" + (Math.floor(audios[i].duration % 60) < 10 ? '0' : '') + Math.floor(audios[i].duration % 60);
+            }else if(previousSongPaused === i){
                 //mirroring the progress bar in the header
                 progressHeaderBar.style.width = progress + "%";
                 //mirroring the inner timing in the header
