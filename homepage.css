@@ -1859,6 +1859,15 @@ section#middle_column .front_article .main_article_title a:hover{
     border: 2px #000 solid;
     box-shadow: darkcyan 0 0 45px 1px
 }
+.podcastHeaderPlay:hover{
+    box-shadow: darkcyan 0 0 45px 1px
+}
+.podcastHeaderPlay:active{
+    box-shadow: darkcyan 0 0 45px 1px
+}
+
+
+
 
 .songSlider{
     width:45%;
@@ -1902,7 +1911,119 @@ section#middle_column .front_article .main_article_title a:hover{
     color: #015fb6;
 }
 
-.scroller{
+.header_podcast{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 2px;
+}
+
+.podcast_img_wrapper{
+    border: 1px solid #ccc;
+    width: 60px;
+    height: 60px;
+}
+
+.podcastHeaderPlay{
+    background:#a9091f;
+    border-radius: 50%;
+    border: none;
+    margin-top: 5%;
+    margin-left:5%;
+    margin-right: 5px;
+    box-shadow: black 0 0 45px 1px;
+}
+
+.mini_timer_bar{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width:20%;
+    text-align: center;
+}
+
+.share_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    column-gap: 5%;
+    width: 80%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.podcast_section_vertical{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin-bottom:1%;
+}
+
+.podcast_left_bar_div{
+    margin-top:0;
+    margin-left:5%;
+    width: 100%;
+}
+
+.mini_front_header{
+    color: gray;
+    font-size: 70%;
+    margin:0;
+    padding:0;
+    text-transform: uppercase;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+.mini_comment{
+    margin:0;
+    padding:0;
+    font-size: 70%;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: 700;
+}
+
+.songSlider_pod{
+    width: 100%;
+    margin-top: 3%;
+    height:10px;
+    background: #a9091f;
+    border-radius: 50px;
+    border: none;
+}
+.songTimer_pod{
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-size: 90%;
+    color: #a9091f;
+    margin-top:2.5%;
+    margin-left: 3%;
+}
+.songTracker_pod{
+    width: 0;
+    height: 10px;
+    background: #428bca;
+    box-shadow: darkcyan 0 0 45px 1px;
+    border-radius: 50px;
+}
+
+
+
+
+::-webkit-scrollbar {
+    height: 250px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a9091f;
+    border-radius: 20px;
+}
+
+.scroller {
     height: 250px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -1920,6 +2041,8 @@ section#middle_column .front_article .main_article_title a:hover{
     margin: 1px 5% 0;
     border-bottom: 1px solid #ccc;
 }
+
+
 
 .menu-icon{
     cursor: pointer;
