@@ -103,8 +103,11 @@ function checkForActiveSong(){
         previousSongPaused = index_current_active_song;
     }else if(index_current_active_song === -1 && previousSongPaused !== -1){
         playPause("podcast" + previousSongPaused,previousSongPaused,previousSongPaused);
+    }else {
+        let randomSong = Math.floor(Math.random() * audiosTot);
+        playPause("podcast"+randomSong,randomSong,randomSong);
+        previousSongPaused = randomSong;
     }
-
 }
 
 let audios = Array(audiosTot);
