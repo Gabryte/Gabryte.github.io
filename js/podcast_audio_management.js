@@ -21,7 +21,7 @@ function playPause(id,index){
         if(i !== index && !activeSong[i].paused){
             activeSong[i].pause();
             play_button.setAttribute("src", "img/play1.png");
-            play_button.style.boxShadow = "black 0 0 45px 1px";
+            play_button.style.boxShadow = "gray 0 0 45px 1px";
 
         }
     }
@@ -39,10 +39,10 @@ function playPause(id,index){
     }else{
         activeSong[index].pause();
         play_button.setAttribute("src", "img/play1.png")
-        play_button.style.boxShadow = "black 0 0 45px 1px";
+        play_button.style.boxShadow = "gray 0 0 45px 1px";
         //mirroring the play button in the header
         headerPlayButton.setAttribute("src", "img/play50X50.png");
-        headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+        headerPlayButton.style.boxShadow = "gray 0 0 45px 1px";
     }
 }
 function stop(id,index){
@@ -177,7 +177,7 @@ for (let i = 0; i < audiosTot; i++) {
                 //mirroring the play button in the header
                 headerPlayButton.setAttribute("src", "img/play50X50.png");
                 //mirroring the play button in the header
-                headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+                headerPlayButton.style.boxShadow = "gray 0 0 45px 1px";
             }else if(previousSongPaused === i){
                 //mirroring the progress bar in the header
                 progressHeaderBar.style.width = 0 + "%";
@@ -186,7 +186,7 @@ for (let i = 0; i < audiosTot; i++) {
                 //mirroring the play button in the header
                 headerPlayButton.setAttribute("src", "img/play50X50.png");
                 //mirroring the play button in the header
-                headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
+                headerPlayButton.style.boxShadow = "gray 0 0 45px 1px";
             }
 
 
@@ -194,7 +194,7 @@ for (let i = 0; i < audiosTot; i++) {
             progressBar[i].style.width = 0 + "%";
             inner[i].innerHTML = "00:00/-:--";
             play_button.setAttribute("src", "img/play1.png")
-            play_button.style.boxShadow = "black 0 0 45px 1px";
+            play_button.style.boxShadow = "gray 0 0 45px 1px";
 
 
         } else {
@@ -226,3 +226,4 @@ volumeBar.addEventListener("change",function (e){
         audios[i].volume = e.currentTarget.value/100;
     }
 });
+//TODO fix the play button :hover effect and the email bar on mouse out
