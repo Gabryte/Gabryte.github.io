@@ -11,6 +11,7 @@ for (let i = 0; i < audiosTot; i++) {
 }
 let play_button;
 function playPause(id,index){
+    previousSongPaused = index;
     for(let i = 0; i < audiosTot; i++){
         if(i !== index && !activeSong[i].paused){
             activeSong[i].pause();
@@ -162,10 +163,6 @@ for (let i = 0; i < audiosTot; i++) {
         }
 
         if (progress === 100) {
-            progressBar[i].style.width = 0 + "%";
-            inner[i].innerHTML = "00:00/-:--";
-            play_button.setAttribute("src", "img/play1.png")
-            play_button.style.boxShadow = "black 0 0 45px 1px";
 
             if(index_current_active_song === i) { //only if the active song is changed the header mirrors it.
                 //mirroring the progress bar in the header
@@ -186,6 +183,14 @@ for (let i = 0; i < audiosTot; i++) {
                 //mirroring the play button in the header
                 headerPlayButton.style.boxShadow = "black 0 0 45px 1px";
             }
+
+
+
+            progressBar[i].style.width = 0 + "%";
+            inner[i].innerHTML = "00:00/-:--";
+            play_button.setAttribute("src", "img/play1.png")
+            play_button.style.boxShadow = "black 0 0 45px 1px";
+
 
         } else {
             progressBar[i].style.width = progress + "%";
