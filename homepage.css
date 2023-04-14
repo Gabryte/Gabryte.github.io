@@ -2009,16 +2009,16 @@ section#middle_column .front_article .main_article_title a:hover{
 
 
 
-
-.podcast_sticky ::-webkit-scrollbar {
-    height: 250px;
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
 }
 
-.podcast_sticky ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-.podcast_sticky ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #a9091f;
     border-radius: 20px;
 }
