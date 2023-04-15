@@ -60,11 +60,6 @@ function stop(id,index){
         progressHeaderBar.style.width = "0" + "%";
         //mirroring the inner timing in the header
         innerTimingHeader.innerHTML = "0" + ":" + "00" + '/<br/>' + Math.floor(activeSong[index_current_active_song].duration / 60) + ":" + (Math.floor(activeSong[index_current_active_song].duration % 60) < 10 ? '0' : '') + Math.floor(activeSong[index_current_active_song].duration % 60);
-    }else if(previousSongPaused !== -1){
-        //mirroring the progress bar in the header
-        progressHeaderBar.style.width = "0" + "%";
-        //mirroring the inner timing in the header
-        innerTimingHeader.innerHTML = "0" + ":" + "00" + '/<br/>' + Math.floor(activeSong[previousSongPaused].duration / 60) + ":" + (Math.floor(activeSong[previousSongPaused].duration % 60) < 10 ? '0' : '') + Math.floor(activeSong[previousSongPaused].duration % 60);
     }
 
 
@@ -226,4 +221,4 @@ volumeBar.addEventListener("change",function (e){
         audios[i].volume = e.currentTarget.value/100;
     }
 });
-//TODO fix the play button :hover effect and the email bar on mouse out
+

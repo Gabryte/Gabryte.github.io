@@ -1628,6 +1628,12 @@ section#middle_column .front_article .main_article_title a:hover{
     max-width: 200px;
     transition-duration: 1s;
 }
+
+.email_input_section input:not( :hover ){
+    max-width: 40px;
+    transition-duration: 1s;
+}
+
 .column_unit_check .sub_caption_title{
     font-family: Signika,Helmet,Freesans,sans-serif;
     font-size: 65%;
@@ -1868,12 +1874,11 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 .podcastPlay:hover{
     border: 2px #000 solid;
-    box-shadow: darkcyan 0 0 45px 1px
 }
 .podcastPlay:active{
-    border: 2px #000 solid;
     box-shadow: darkcyan 0 0 45px 1px
 }
+
 .songSlider{
     width:45%;
     margin-top: 3%;
@@ -1931,17 +1936,16 @@ section#middle_column .front_article .main_article_title a:hover{
 }
 
 .podcastHeaderPlay{
-    background:#a9091f;
-    border-radius: 50%;
     border: none;
+    border-radius: 50%;
     margin-top: 5%;
     margin-left:5%;
     margin-right: 5px;
     box-shadow: gray 0 0 45px 1px;
 }
 
-.podcastHeaderPlay:hover{
-    box-shadow: darkcyan 0 0 45px 1px
+.podcast_img_wrapper:hover{
+    border: 1px solid darkcyan;
 }
 .podcastHeaderPlay:active{
     box-shadow: darkcyan 0 0 45px 1px
